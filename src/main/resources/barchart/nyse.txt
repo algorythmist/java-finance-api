@@ -1,0 +1,860 @@
+A:Agilent Technologies
+AA:Alcoa Inc
+AA-B:Alcoa Inc
+AAC:Aac Holdings Inc
+AAN:Aaron's Inc
+AAP:Advance Auto Parts Inc
+AAT:American Assets Trust
+AAV:Advantage Oil & Gas Ltd
+AB:Alliance Capital Management L.P.
+ABB:Abb Ltd
+ABBV:Abbvie Inc. Common Stock
+ABC:Amerisourcebergen Corp
+ABEV:Ambev S.A.
+ABG:Asbury Automotive Group Inc
+ABM:ABM Industries Incorporated
+ABR:Arbor Realty Trust
+ABR-A:Arbor Realty Trust Inc
+ABR-B:Arbor Realty Trust Inc
+ABR-C:Arbor Realty Trust
+ABRN:Arbor Realty Trust 7.375% Senior
+ABT:Abbott Laboratories
+ABX:Barrick Gold Corp
+ACC:American Campus Communities Inc
+ACCO:Acco Brands Corp
+ACE:Ace Ltd
+ACG:Alliancebernstein Income Fund Inc
+ACH:Aluminum Corporation of China Ltd
+ACI:Arch Coal
+ACM:Aecom Technology Corp
+ACN:Accenture Plc
+ACP:Avenue Income Credit Strategies
+ACRE:Ares Commercial Real Estate Cor
+ACV:Allianzgi Diversified Income &
+ACW:Accuride Corporation
+ADC:Agree Realty Corp
+ADM:Archer Daniels Midland Company
+ADPT:Adeptus Health Inc
+ADS:Alliance Data Systems Corp
+ADT:ADT Corp
+ADX:Adams Express Company
+AEB:Aegon N.V.
+AED:Aegon N.V.
+AEE:Ameren Corp
+AEG:Aegon N.V.
+AEH:Aegon N.V.
+AEK:Aegon N.V. 8.00%
+AEL:American Equity Investment Life
+AEM:Agnico-Eagle Mines Ltd
+AEO:American Eagle Outfitters
+AEP:American Electric Power Company
+AER:Aercap Holdings N.V.
+AES:The Aes Corp
+AES-C:Aes TR III 6.75 Pfd
+AET:Aetna Inc
+AEUA:Anadarko Petroleum Corp
+AF:Astoria Financial Corp
+AF-C:Astoria Financial Corp
+AFA:American Financial Group Inc
+AFB:Alliance National Municipal
+AFC:Allied Capital Corp
+AFG:American Financial Group
+AFGE:American Financial Group Inc
+AFL:Aflac Incorporated
+AFM:Affiliated Managers Group Inc
+AFQ:American Financial Group
+AFS-A:Amtrust Financial Services Inc
+AFS-B:Amtrust Financial Services Dep Pfd
+AFS-C:Amtrust Financial Services Series C
+AFS-D:Amtrust Financial Services Dep Pfd
+AFSD:Aflac Incorporated
+AFSS:Amtrust Financial Services Inc
+AFST:Amtrust Financial Services Inc
+AFT:Apollo Senior Floating Rate Fund Inc
+AFW:American Financial Group Inc
+AG:First Majestic Silver
+AGC:Advent Claymore Convertible Securities
+AGCO:Agco Corp
+AGD:Alpine Global Dynamic Dividend Fund
+AGI:Alamos Gold Inc
+AGM:Federal Agricultural Mortgage Corp
+AGM-A:Federal Agricultural Mortgage
+AGM-B:Federal Ag
+AGM-C:Federal Agricultural Mortgage
+AGM.A:Federal Agricultural Mortgage Corp
+AGN:Allergan Plc
+AGN-A:Allergan Plc. 5.50% Mandatory C
+AGO:Assured Guaranty Ltd
+AGO-B:Assured Guaranty Ltd [B]
+AGO-E:Assured Guaranty Ltd [E]
+AGO-F:Assured Guaranty Ltd [F]
+AGRO:Adecoagro S.A.
+AGU:Agrium Inc
+AGX:Argan Inc
+AHC:A.H. Belo Corp
+AHH:Armada Hoffler Properties Inc
+AHL:Aspen Insurance Holdings
+AHL-A:Aspen Insurance Pfd
+AHL-B:Aspen Insurance Holdings Limit
+AHL-C:Aspen Ins Pfd Inc
+AHP:Ashford Hospitality Prime Inc
+AHS:Amn Healthcare Services Inc
+AHT:Ashford Hospitality Trust Inc
+AHT-A:Ashford Hsop TR Pfd
+AHT-D:Ashford Hosp D Pfd
+AHT-E:Ashford Hospitality Trust Inc 9
+AI:Arlington Asset Investment Corp
+AIB:Apollo Investment Corp
+AIC:Arlington Asset Investment Cor
+AIF:Apollo Tactical Income Fund Inc
+AIG:American International Group
+AIG.W:American International Group
+AIN:Albany International Corp
+AIR:AAR Corp
+AIT:Applied Industrial Technologies
+AIV:Apartment Investment and Management
+AIV-A:Apartment Investment and Manag
+AIV-Z:Apartment Inv. & Mgt. Co
+AIW:Arlington Asset Investment Cor
+AIY:Apollo Investment Corp
+AIZ:Assurant Inc
+AJG:Arthur J. Gallagher & Co
+AJRD:Gencorp Inc
+AJX:Great Ajax Corp
+AKO.A:Embotell Andina Sa A
+AKO.B:Embotell Andna Sa B
+AKP:Alliance California Muni
+AKR:Acadia Realty Trust
+AKS:AK Steel Holding Corp
+AL:Air Lease Corporation Class A C
+ALB:Albemarle Corp
+ALDW:Alon USA Partners LP
+ALE:Allete Inc
+ALEX:Alexander and Baldwin Inc
+ALG:Alamo Group
+ALJ:Alon USA Energy
+ALK:Alaska Air Group
+ALL:Allstate Corp
+ALL-A:Allstate Corporation Pfd
+ALL-B:Ally Financial Inc Fixed Rate F
+ALL-C:The Allstate Corp
+ALL-D:Allstate Corp
+ALL-E:The Allstate Corporation
+ALL-F:The Allstate Corporation
+ALLE:Allegion Plc Ordinary Shares Wh
+ALLY:Ally Financial
+ALP-O:Alabama Pwr 5.83A Pf
+ALR:Alere Inc
+ALR-B:Alere Inc. Inverness Medical In
+ALSN:Allison Transmission Holdings
+ALU:Alcatel Lucent
+ALV:Autoliv Inc
+ALX:Alexander's Inc
+AM:Antero Resources Midstream Llc
+AMBR:Amber Road Inc
+AMC:Amc Entertainment Holdings Inc
+AME:Amtek Inc
+AMFW:Amec Foster Wheeler Plc
+AMG:Affiliated Managers Group
+AMH:American Homes 4 Rent
+AMH-A:American Homes
+AMH-B:American Homes 4 Rent 5% Series
+AMH-C:American Homes
+AMID:American Midstreampartners LP
+AMP:Ameriprise Financial Services
+AMRC:Ameresco Inc
+AMT:American Tower Corp
+AMT-A:Apollo Residential Preferred
+AMT-B:American Tower Corporation [Rei
+AMTD:TD Ameritrade Holding Corp
+AMTG:Apollo Residential Mortgage In
+AMX:America Movil S.A.B. De C.V
+AN:Autonation Inc
+ANET:Arista Networks Inc
+ANF:Abercrombie & Fitch Company
+ANFI:Amira Nature Foods Ltd
+ANH:Anworth Mortgage Asset Corp
+ANH-A:Anworth Mtg Pfd A
+ANH-B:Anworth 6.25 Pr S B
+ANH-C:Anworth Mortgage Asset Corpora
+ANTM:Anthem Inc
+ANTX:Anthem Inc
+ANW:Aegean Marine Petroleum Network
+AOD:Alpine Total Dynamic Dividend
+AOI:Alliance One International
+AON:AON Plc
+AOS:Smith [A.O.] Corp
+AP:Ampco-Pittsburgh Corp
+APA:Apache Corp
+APAM:Artisan Partners Asset Manageme
+APB:Asia Pacific Fund Inc
+APC:Anadarko Petroleum Corp
+APD:Air Products and Chemicals
+APF:Morgan Stanley Asia Pacific Fund Inc
+APH:Amphenol Corp
+APLE:Apple Hospitality REIT Inc
+APO:Apollo Global Management Llc C
+APTS:Preferred Apartment Communities
+APU:Amerigas Partners L.P.
+AR:Antero Resources Corp
+ARC:American Reprographics Company
+ARCO:Arcos Dorados Holdings Inc
+ARCX:Arc Logistics Partners LP
+ARDC:Ares Dynamic Credit Allocation
+ARE:Alexandria Real Estate Equities
+ARE-E:Alexandria Real Estate Equitie
+ARES:Ares Management LP
+ARG:Airgas Inc
+ARH-C:Arch Capital Group Ltd. 6.75% P
+ARI:Apollo Commercial Real Estate
+ARI-A:Apollo Commercial Real Estate
+ARL:American Realty Investors
+ARMF:Ares Multi-Strategy Credit Fund
+ARMK:Aramark Holdings Corp
+ARO:Aeropostale Inc
+ARP:Atlas Resource Partners L.P. C
+ARP-D:Atlas Resource Partners L.P.
+ARP-E:Atlas Resource Partners L.P. 1
+ARPI:American Residential Properties
+ARR:Armour Residential R
+ARR-A:Armour Residential REIT Inc
+ARR-B:Armour Residential REIT Inc
+ARU:Ares Capital Corp
+ARW:Arrow Electronics
+ARY:Ares Capital Corp
+ASA:ASA Gold and Precious Metals
+ASB:Associated Banc-Corp
+ASB-B:Associated Banc-Corp Depositary
+ASB-C:Associated Banc-Corp Depositary
+ASC:Ardmore Shipping Corp
+ASG:Liberty All-Star Growth Fund
+ASGN:On Assignment
+ASH:Ashland Inc
+ASPN:Aspen Aerogels Inc
+ASR:Grupo Aeroportuario Del Sureste
+ASX:Advanced Semiconductor Engineering
+AT:Atlantic Power Corp
+ATE:Advantest Corporation Ads
+ATEN:A10 Networks Inc
+ATHM:Autohome Inc
+ATI:Allegheny Technologies Inc
+ATLS:Atlas Energy Llc
+ATO:Atmos Energy Corp
+ATR:Aptargroup
+ATTO:Atento S.A.
+ATU:Actuant Corp
+ATV:Acorn International
+ATW:Atwood Oceanics
+AU:Anglogold Ashanti Ltd
+AUO:Au Optronics Corp
+AUY:Yamana Gold
+AV:Aviva Plc
+AVA:Avista Corp
+AVAL:Grupo Aval Acciones Y Valores S
+AVB:Avalonbay Communities
+AVD:American Vanguard Corp
+AVG:Avg Technologies N.V.
+AVH:Avianca Holdings S.A.
+AVK:Advent Claymore Convertible Securities
+AVOL:Avolon Holdings Ltd
+AVP:Avon Products
+AVT:Avnet Inc
+AVV:Aviva Plc
+AVX:Avx Corp
+AVY:Avery Dennison Corp
+AWF:Alliancebernstein Global High Income Fund
+AWH:Allied World Assurance Company
+AWI:Armstrong World Industries Inc
+AWK:American Water Works
+AWP:Alpine Global Premier Propertie
+AWR:American States Water Company
+AXE:Anixter International Inc
+AXL:American Axle & Manufacturing
+AXLL:Georgia Gulf Corp
+AXON:Axovant Sciences Ltd. Common Sh
+AXP:American Express Company
+AXR:Amrep Corp
+AXS:Axis Capital Holdings
+AXS-C:Axis Capital Holdings Limited P
+AXS-D:Axis Capital Holdings Ltd
+AXTA:Axalta Coating Systems Ltd
+AYI:Acuity Brands Inc
+AYN:Alliance New York Muni
+AYR:Aircastle Ltd
+AZN:Astrazeneca Plc
+AZO:Autozone
+AZUR:Azure Midstream Partners LP
+AZZ:Azz Inc
+B:Barnes Group
+BA:Boeing Company
+BABA:Alibaba Group Holding Ltd
+BAC:Bank of America Corp
+BAC-D:Bac Dep Share D
+BAC-E:Bank Amer Corp Dep R
+BAC-I:Bank Amer Corp Pfd
+BAC-L:Bank Amer Pfd Ser L
+BAC-W:Bank of America Corp
+BAC-Y:Bank of America Corporation
+BAC-Z:Bac Cap TR ViII
+BAC.A:Bank of America Corporation Bac
+BAC.B:Bank of America Corporation Bac
+BAF:Blackrock Income Inv Quality Trust
+BAH:Booz Allen Hamilton Holding Corp
+BAK:Copene-Petroquimica Do Nordeste
+BAM:Brookfield Asset Management Inc
+BAN-C:Banc of California Inc. Deposi
+BANC:First Pactrust Bancorp
+BAP:Credicorp Ltd
+BAS:Basic Energy Services
+BAX:Baxter International Inc
+BBD:Banco Bradesco Sa
+BBDO:Banco Bradesco S.A.
+BBF:Blackrock Muni Income Trust
+BBG:Bill Barrett Corp
+BBK:Blackrock Muni Trust
+BBL:Bhp Billiton Plc
+BBN:Balckrock Build America Trust
+BBT:BB&T Corp
+BBT-D:BB&T Corp
+BBT-E:BB&T Corp
+BBT-F:BB&T Corp
+BBT-G:BB&T Corporation Ser G
+BBVA:Banco Bilbao Viscaya Argentaria S.A.
+BBW:Build-A-Bear Workshop
+BBX:Bankatlantic Bancorp
+BBY:Best Buy Co
+BC:Brunswick Corp
+BCA:Corpbanca
+BCC:Boise Cascade L.L.C. Common ST
+BCE:BCE Inc
+BCEI:Bonanza Creek Energy Inc
+BCH:Banco De Chile
+BCO:Brink's Company
+BCR:C.R. Bard
+BCRH:Blue Capital Reinsurance Holdi
+BCS:Barclays Plc
+BCS-:Barclays Bk ADR Sr 2
+BCS-A:Barclays Ads
+BCS-C:Barclays Bank 4 Ads
+BCS-D:Barclays Bank Plc
+BCX:Blackrock Resources Common Shar
+BDC:Belden Inc
+BDJ:Blackrock Enhanced Dividend Achievers
+BDN:Brandywine Realty Trust
+BDN-E:Brandywine Realty Trust
+BDX:Becton Dickinson and Company
+BEE:Strategic Hotels & Resorts Inc
+BEL:Belmond Ltd
+BEN:Franklin Resources
+BEP:Brookfield Renewable
+BERY:Berry Plastics Group Inc
+BETR:Amplify Snack Brands Inc
+BF.A:Brown Forman Inc A
+BF.B:Brown Forman Inc B
+BFAM:Bright Horizons Family Solutions Inc
+BFK:Blackrock Muni Income Trust
+BFO:Blackrock Florida Muni 2020 Trust
+BFR:Bbva Banco Frances S.A.
+BFS:Saul Centers
+BFS-C:Saul Centers Inc
+BFZ:Blackrock California Muni Trust
+BG:Bunge Ltd
+BGB:Blackstone / Gso Strategic Cre
+BGC:General Cable Corp
+BGCA:Bgc Partners Inc
+BGE-B:Bge Capital Trust II
+BGG:Briggs & Stratton Corp
+BGH:Babson Capital Global Short Du
+BGR:Blackrock Energy and Resources Trust
+BGS:B&G Foods Holdings
+BGT:Blackrock Global
+BGX:Blackstone Gso Long Short Credit Fund
+BGY:Blackrock International
+BH:Biglari Holdings Inc
+BHE:Benchmark Electronics
+BHI:Baker Hughes Inc
+BHK:Blackrock Core Trust
+BHL:Blackrock Defined Opportunity Trust
+BHLB:Berkshire Hills Bancorp
+BHP:Bhp Billiton Ltd
+BID:Sotheby's Holdings
+BIE:Blackrock Muni Bond Investment Trust
+BIF:Uslife Income Fund
+BIG:Big Lots
+BIN:Progressive Waste Solutions Ltd
+BIO:Bio-Rad Laboratories
+BIO.B:Bio Rad Labs Cl B
+BIO.W:Bio-Rad Laboratories Inc
+BIOA:Bioamber Inc
+BIP:Brookfield Infrastructure Partners LP
+BIT:Blackrock Multi-Sector Income T
+BITA:Bitauto Holdings Ltd
+BJZ:Blackrock California Muni 2018 Trust
+BK:Bank of New York Mellon Corp
+BK-C:The Bank of New York Mellon Co
+BKD:Brookdale Senior Living Inc
+BKE:Buckle Inc
+BKFS:Black Knight Financial Services
+BKH:Black Hills Corp
+BKK:Blackrock Muni 2020 Trust
+BKN:Blackrock Investment Quality Municipal
+BKS:Barnes & Noble
+BKT:Blackrock Income Trust Inc
+BKU:BankUnited Inc
+BLD:Topbuild Corp
+BLH:Blackrock New York Muni 2018 Trust
+BLK:Blackrock
+BLL:Ball Corp
+BLOX:Infoblox Inc
+BLT:Blount International
+BLW:Blackrock Limited Duration Income Trust
+BLX:Banco Latinoamericano De Comercio
+BMA:Banco Macro S.A.
+BME:Blackrock Health Sciences Trust
+BMI:Badger Meter
+BML-G:Bank America Dep G
+BML-H:Bank America Dep H
+BML-I:Bank America Dep I
+BML-J:Bank America Dep J
+BML-L:Bank America Dep L
+BMO:Bank of Montreal
+BMR:Biomed Realty Trust
+BMS:Bemis Company
+BMY:Bristol-Myers Squibb Company
+BNED:Barnes & Noble Education Inc C
+BNJ:Blackrock New Jersey Muni Income Trust
+BNK:C1 Financial Inc
+BNS:Bank of Nova Scotia
+BNY:Blackrock New York Muni Trust Inc
+BOCA:Banc of California Inc
+BOE:Blackrock Global
+BOH:Bank of Hawaii Corp
+BOI:Brookfield Mortgage Opportunit
+BOOT:Boot Barn Holdings Inc
+BORN:China New Borun Corp
+BOX:Box Inc
+BOXC:Brookfield Office Properties C
+BP:BP P.L.C
+BPI:Bridgepoint Education
+BPK:Blackrock Muni 2018 Trust
+BPL:Buckeye Partners L.P.
+BPT:BP Prudhoe Bay Royalty Trust
+BPY:Brookfield Property Partners L
+BQH:Blackrock New York Muni Trust
+BR:Broadridge Financial Solutions Llc
+BRC:Brady Corp
+BRFS:Brf-Brasil Foods S.A.
+BRK.A:Berkshire Hath Hld A
+BRK.B:Berkshire Hath Hld B
+BRO:Brown & Brown
+BRS:Bristow Group Inc
+BRSS:Global Brass and Copper Holdin
+BRT:BRT Realty Trust
+BRX:Brixmor Property Group Inc. Com
+BSAC:Banco Santander-Chile Ads
+BSBR:Banco Santander Brasil Sa
+BSD:Blackrock Strategic Muni Trust Inc
+BSE:Blackrock New York Muni Income Trust
+BSI:Alon Holdings - Blue Square Israel Ltd
+BSL:Blackstone Gso Senior Floating Rate
+BSM:Black Stone Minerals L.P.
+BSMX:Grupo Financiero Santander Mxi
+BST:Blackrock Science and Technolo
+BSX:Boston Scientific Corp
+BT:Bt Group Plc
+BTA:Blackrock Long-Term Muni Advantage Trust
+BTE:Baytex Energy Corp
+BTO:John Hancock Bank and Thrift Fund
+BTT:Blackrock Municipal Target Term
+BTU:Peabody Energy Corp
+BTZ:Blackrock Preferred
+BUD:Anheuser-Busch Inbev Sa
+BUI:Blackrock Utility and Infrastr
+BURL:Burlington Stores Inc
+BVN:Compania Mina Buenaventura S.A.
+BW:Babcock & Wilcox Enterprises I
+BWA:Borgwarner Inc
+BWG:Legg Mason Bw Global Income Op
+BWP:Boardwalk Pipeline Partners L.P.
+BWXT:Bwx Technologies Inc. Common S
+BX:The Blackstone Group L.P.
+BXC:Bluelinx Holdings Inc
+BXE:Bellatrix Exploration Ltd
+BXLT:Baxalta Incorporated Common Sto
+BXMT:Blackstone Mortgage Trust Inc. Cl A
+BXMX:Nuveen Equity Premium
+BXP:Boston Properties
+BXP-B:Boston Properties Inc
+BXS:Bancorpsouth Inc
+BYD:Boyd Gaming Corp
+BYM:Blackrock Muni Income Quality Trust
+BZH:Beazer Homes USA
+C:Citigroup Inc
+C-C:Citigroup Inc
+C-J:Citigroup Inc
+C-K:Citigroup Inc
+C-L:Citigroup Inc
+C-N:Citigroup Capital XiII
+C-P:Citigroup Pfd Ser Aa
+C.A:Citigroup Inc Wrnt 'A'
+C.B:Citigroup Inc Wrnt 'B'
+CAA:Calatlantic Group Inc.
+CAB:Cabela's Inc
+CABO:Cable One Inc. Common Stock Wh
+CACI:Caci International
+CAE:Cae Inc
+CAF:Morgan Stanley China A Share Fund Inc
+CAG:Conagra Foods
+CAH:Cardinal Health
+CAI:Cai International
+CAJ:Canon Inc
+CAL:Caleres Inc
+CALX:Calix Inc
+CAM:Cameron International Corp
+CAPL:Crossamerica Partners LP
+CAS:Castle [A.M.] & Co
+CAT:Caterpillar Inc
+CATO:Cato Corp
+CB:Chubb Corp
+CBA:Clearbridge American Energy ML
+CBB:Cincinnati Bell Inc
+CBB-B:Cincinnati Bell Pr B
+CBD:Companhia Brasileira De Distribuicao
+CBG:CBRE Group Inc
+CBI:Chicago Bridge & Iron Company N.V.
+CBK:Christopher & Banks Corp
+CBL:Cbl & Associates Properties
+CBL-D:Cbl Pfd D
+CBL-E:Cbl & Associates Properties I
+CBM:Cambrex Corp
+CBO:Cbo [Listing Market - NYSE - Ne
+CBPX:Continental Building Products
+CBR:Ciber Inc
+CBS:CBS Corp
+CBS.A:CBS Corp
+CBT:Cabot Corp
+CBU:Community Bank System
+CBZ:Cbiz Inc
+CC:Chemours Company [The] Common S
+CCC:Calgon Carbon Corp
+CCE:Coca-Cola Enterprises
+CCG:Campus Crest Communities
+CCG-A:Campus Crest Communities Inc
+CCI:Crown Castle International Corp
+CCI-A:Crown Castle International Cor
+CCJ:Cameco Corp
+CCK:Crown Cork & Seal Company
+CCL:Carnival Corp
+CCM:Concord Medical Services
+CCO:Clear Channel Outdoor Holdings
+CCP:Care Capital Properties Inc. C
+CCS:Century Communities Inc
+CCSC:Country Style Cooking
+CCU:Compania Cervecerias Unidas S.A.
+CCV:Comcast Corp
+CCZ:Comcast Corp
+CDE:Coeur Mining Inc
+CDE.W:Coeur D'Alene Mines Corporatio
+CDI:Cdi Corp
+CDR:Cedar Shopping Centers Inc
+CDR-B:Cedar Realty Trust Inc
+CE:Celanese Corp
+CEA:China Eastern Airlines Corp Ltd
+CEB:The Corporate Executive Board Company
+CEE:Central Europe and Russia Fund
+CEL:Cellcom Israel
+CELP:Cypress Energy Partners L.P.
+CEM:Clearbridge Energy MLP Fund Inc
+CEN:Center Coast MLP & Infrastructure
+CEO:Cnooc Ltd
+CEQP:Crestwood Equity Partners LP
+CF:Cf Industries Holdings
+CFC-A:Countrywide Cap IV
+CFC-B:Countrywide Cap V
+CFG:Citizens Financial Group Inc/Ri
+CFI:Culp Inc
+CFR:Cullen/Frost Bankers
+CFR-A:Cullen/Frost Bankers Inc
+CFX:Colfax Corp
+CGA:China Green Agriculture
+CGG:Compagnie Generale De Gephysqu
+CGI:Celadon Group
+CHA:China Telecom Corp Ltd
+CHCT:Community Healthcare Trust Inc
+CHD:Church & Dwight Company
+CHE:Chemed Inc
+CHGG:Chegg Inc
+CHH:Choice Hotels International
+CHK:Chesapeake Energy Corp
+CHK-D:Chesapeake En Cv Pfd
+CHKR:Chesapeake Granite Wash Trust
+CHL:China Mobile [Hong Kong] Ltd
+CHMI:Cherry Hill Mortgage Investmen
+CHMT:Chemtura Corp
+CHN:China Fund
+CHS:Chico's Fas
+CHS-A:Chesapeake Lodging Trust 7.75%
+CHSP:Chesapeake Lodging Trust
+CHT:Chunghwa Telecom Co Ltd
+CHU:China Unicom [Hong Kong] Ltd
+CI:Cigna Corp
+CIA:Citizens Inc
+CIB:Bancolombia S.A.
+CIE:Cobalt International Energy
+CIEN:Ciena Corp
+CIF:Colonial Intermediate High
+CIG:Comp En De Mn Cemig Ads
+CIG.C:Comp En De Mn Cemig Ads
+CII:Blackrock Capital and Income Strategies
+CIM:Chimera Investment Corp
+CIO:City Office REIT Inc
+CIR:Circor International
+CIT:Cit Group Inc [Del]
+CIVI:Civitas Solutions Inc
+CJES:C&J Energy Services Inc
+CKH:Seacor Smit Inc
+CKP:Checkpoint Systms
+CL:Colgate-Palmolive Company
+CLA:Capitala Finance Corp
+CLB:Core Laboratories N.V.
+CLC:Clarcor Inc
+CLD:Cloud Peak Energy Inc
+CLDT:Chatham Lodging Trust [Reit]
+CLF:Cliffs Natural Resources Inc
+CLGX:Corelogic
+CLH:Clean Harbors
+CLI:Mack-Cali Realty Corp
+CLN-A:Colony Financial Inc
+CLN-B:Colony Financial Inc Perp Pfd
+CLNY:Colony Financial Inc
+CLR:Continental Resources
+CLS:Celestica Inc
+CLV:Cliffs Natural Resources Inc. Dep. Pfd
+CLW:Clearwater Paper Corp
+CLX:Clorox Company
+CM:Canadian Imperial Bank of Commerce
+CMA:Comerica Inc
+CMA.W:Comerica Inc
+CMC:Commercial Metals Company
+CMCM:Cheetah Mobile Inc
+CMG:Chipotle Mexican Grill
+CMI:Cummins Inc
+CMK:Colonial Intermarket Income Trust I
+CMN:Cantel Medical
+CMO:Capstead Mortgage Corp
+CMO-E:Capstead Mortgage Corp
+CMP:Compass Minerals Intl Inc
+CMR-B:Costamare Inc. Perpetual Prefer
+CMR-C:Costamare Inc. Perpetual Prefer
+CMRE:Costamare Inc
+CMS:Cms Energy Corp
+CMS-B:Consumers Engry 4.50
+CMU:Colonial Muni Income Trust
+CNA:Cna Financial Corp
+CNC:Centene Corp
+CNCO:Cencosud S.A.
+CNHI:Cnh Industrial N.V.
+CNI:Canadian National Railway Company
+CNK:Cinemark Holdings Inc
+CNL:Cleco Power Llc
+CNNX:Cone Midstream Partners LP
+CNO:Cno Financial Group
+CNP:Centerpoint Energy Inc
+CNQ:Canadian Natural Resources
+CNS:Cohn & Steers Inc
+CNW:Con-Way Inc
+CNX:Consol Energy Inc
+CNXC:CNX Coal Resources LP Common Un
+CO:China Cord Blood Corporation
+CODI:Compass Diversified Holdings
+COF:Capital One Financial Corp
+COF-C:Capital One Financial Corporat
+COF-D:Capital One Financial Corporat
+COF-F:Capital One Financial Corporat
+COF-P:Capital One Financial Corp Pfd
+COF.W:Capital One Financial Corp
+COG:Cabot Oil & Gas Corp
+COH:Coach Inc
+COL:Rockwell Collins
+COO:Cooper Companies
+COP:Conocophillips
+COR:Coresite Realty Corp
+COR-A:Coresite Realty Corp
+CORR:Corenergy Infrastructure Trust Inc
+COT:Cott Corp
+COTY:Coty Inc
+COUP:Coupons.Com Inc
+CP:Canadian Pacific Railway
+CPA:Copa Holdings S.A.
+CPAC:Cementos Pacasmayo S.A.A
+CPB:Campbell Soup Company
+CPE:Callon Petroleum Company
+CPE-A:Callon Petroleum Company Prefer
+CPF:Central Pacific Financial Co
+CPG:Crescent Pt Energy
+CPGX:Columbia Pipeline Group Inc. C
+CPK:Chesapeake Utilities Corp
+CPL:Cpfl Energia S.A.
+CPN:Calpine Corp
+CPPL:Columbia Pipeline Partners LP
+CPS:Cooper Std Hldg Inc
+CPT:Camden Property Trust
+CR:Crane Company
+CRC:California Resources Corporatio
+CRCM:Care.Com Inc
+CRD.A:Crawford Co Cl A
+CRD.B:Crawford Co Cl B
+CRH:CRH Plc
+CRI:Carter's Inc
+CRK:Comstock Resources
+CRL:Charles River Laboratories Intl
+CRM:Salesforce.Com Inc
+CRR:Carbo Ceramics
+CRS:Carpenter Technology Corp
+CRT:Cross Timbers Royalty Trust
+CRY:Cryolife
+CS:Credit Suisse Group
+CSC:Computer Sciences Corp
+CSG:Chambers Street Properties
+CSH:Cash America International
+CSI:Cutwater Select Income Fund
+CSL:Carlisle Companies Inc
+CSLT:Castlight Health Inc
+CSS:Css Industries
+CST:Cst Brands Inc. Common Stock
+CSTM:Constellium N.V.
+CSU:Capital Senior Living Corp
+CSV:Carriage Services
+CSX:CSX Corp
+CTB:Cooper Tire & Rubber Company
+CTL:Centurylink
+CTLT:Catalent Inc
+CTQ:Qwest Corp
+CTR:Clearbridge Energy MLP Fund In
+CTS:Cts Corp
+CTT:Catchmark Timber Trust Inc
+CTU:Qwest Corp
+CTV:Qwest Corporation
+CTW:Qwest Corp
+CTX:Qwest Corp
+CTY:Qwest Corp
+CTZ:Qwest Corporation 6.625% Notes
+CUB:Cubic Corp
+CUB-A:Cubesmart 7.75% Series A Cumula
+CUBE:Cubesmart
+CUBI:Customers Bancorp
+CUBS:Customers Bancorp Inc
+CUDA:Barracuda Networks Inc
+CUK:Carnival Plc Ads
+CUZ:Cousins Properties Inc
+CVA:Covanta Holding Corp
+CVB:Lehman Abs Corp
+CVC:Cablevision Systems Corp
+CVE:Cenovus Energy Inc
+CVEO:Civeo Corporation Common Stock
+CVG:Convergys Corp
+CVI:Cvr Energy Inc
+CVO:Cenveo Inc
+CVRR:Cvr Refining LP
+CVS:CVS Corp
+CVT:Cvent Inc
+CVX:Chevron Corp
+CW:Curtiss-Wright Corp
+CWEI:Clayton Williams Energy
+CWT:California Water Service Group Holding
+CX:Cemex S.A.B. De C.V. Sponsored
+CXE:Colonial High Income Muni Trust
+CXH:Colonial Investment Grade Muni Trust
+CXO:Concho Resources Inc
+CXP:Columbia Property Trust Inc
+CXW:Corrections Corporation of America
+CYD:China Yuchai International
+CYH:Community Health Systems
+CYN:City National Corp
+CYN-C:City National Corp
+CYN-D:City National Corporation Repr
+CYS:Cys Investments Inc
+CYS-A:Cys Investments Inc
+CYS-B:Cys Investments Inc
+CYT:Cytec Industries Inc
+CZZ:Cosan Ltd
+D:Dominion Resources
+DAC:Danaos Corp
+DAL:Delta Air Lines Inc
+DAN:Dana Holding Corp
+DANG:E-Commerce China Dangdang Inc
+DAR:Darling International Inc
+DATA:Tableau Software Inc. Class A
+DB:Deutsche Bank Ag
+DBD:Diebold Inc
+DBL:Doubleline Opportunistic Credi
+DCA:Dca Total Return Fund
+DCI:Donaldson Company
+DCM:Ntt Docomo Inc
+DCO:Ducommun Inc
+DCT:Dct Industrial Trust Inc
+DCUA:Dominion Resources
+DCUB:Dominion Resources Inc. Un Series B
+DCUC:Dominion Res Inc Va
+DD:E.I. Du Pont De Nemours and Company
+DD-A:Du Pont E I 3.50 Pfd
+DD-B:Du Pont E I 4.50 Pfd
+DDC:Dominion Diamond Corp
+DDD:3D Systems Corp
+DDE:Dover Downs Gaming & Entertainment Inc
+DDF:Delaware Dividend & Income
+DDR:Ddr Corp
+DDR-J:Ddr Corp
+DDR-K:Ddr Corp
+DDS:Dillard's
+DDT:Dillard's
+DE:Deere & Company
+DEA:Easterly Government Properties
+DECK:Deckers Outdoor Corp
+DEG:Etablissements Delhaize Freres
+DEI:Douglas Emmett
+DEL:Deltic Timber Corp
+DEO:Diageo Plc
+DEX:Delaware Enhanced Global Dividend
+DF:Dean Foods Company
+DFP:Flaherty & Crumrine Dynamic
+DFS:Discover Financial Services
+DFS-B:Discover Financial Services
+DFT:Dupont Fabros Technology
+DFT-A:Dupont Fabros Technology Inc
+DFT-B:Dupont Fabros Technology Inc
+DG:Dollar General Corp
+DGI:Digitalglobe Inc
+DGX:Quest Diagnostics Inc
+DHF:Dreyfus High Yield Strategies Fund
+DHG:Dws High Income Opportunities Fund
+DHI:D.R. Horton
+DHR:Danaher Corp
+DHT:Dht Holdings
+DHX:Dice Holdings
+DIAX:Nuveen DOW
+DIN:Dineequity Inc
+DIS:Walt Disney Company
+DK:Delek US Holdings
+DKL:Delek Logistics Partners LP
+DKS:Dick's Sporting Goods Inc
+DKT:Deutsch Bk Contingent Cap TR V
+DL:China Distance Education Holdings
+DLB:Dolby Laboratories
+DLNG:Dynagas Lng Partners LP
+DLPH:Delphi Automotive Plc
+DLR:Digital Realty Trust
+DLR-E:Digital Realtytrust Inc
+DLR-F:Digital Realty Trust Inc
+DLR-G:Digital Realty Trust Inc
+DLR-H:Digital Realty
+DLR-I:Digital Rlty TR Inc Pfd Sr I %
+DLX:Deluxe Corp
+DM:Dominion Midstream Partners LP
+DMB:Dreyfus Municipal Bond Infrastr
+DMD:Demand Media Inc
+DMO:Western Asset Mortgage Defined Opp
+DNB:Dun & Bradstreet Corp
+DNI:Chartwell Dividend & Income Fund
+DNOW:Now Inc. Common Stock When Issu
+DNP:Duff & Phelps Utilities Income
