@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.tecacet.finance.io.parser.BarchartAssetParser;
 import com.tecacet.finance.model.Asset;
 import com.tecacet.finance.model.AssetType;
-import com.tecacet.finance.parser.BarchartAssetParser;
 
 public class BarchartAssetService implements AssetService {
 

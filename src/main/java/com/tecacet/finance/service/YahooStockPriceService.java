@@ -12,23 +12,23 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.tecacet.finance.io.parser.YahooPriceParser;
 import com.tecacet.finance.model.StandardPeriodType;
 import com.tecacet.finance.model.StockPrice;
-import com.tecacet.finance.parser.YahooCSVParser;
 
 public class YahooStockPriceService implements StockPriceService {
 
 	private static final String HISTQUOTES_BASE_URL = "http://ichart.yahoo.com/table.csv?";
 
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	private final YahooCSVParser parser = new YahooCSVParser();
+	private final YahooPriceParser parser = new YahooPriceParser();
 
 	@Override
 	public List<StockPrice> getPriceHistory(String ticker, LocalDate fromDate, LocalDate toDate,
 			StandardPeriodType periodType) throws StockServiceException {
 
 		try {
-			String url = buildURl(ticker, fromDate, toDate, periodType);
+			String url = buildURL(ticker, fromDate, toDate, periodType);
 			logger.info(url);
 			Response response = WebUtil.getURLResponse(url);
 			InputStream is = response.readEntity(InputStream.class);
@@ -38,7 +38,7 @@ public class YahooStockPriceService implements StockPriceService {
 		}
 	}
 
-	private String buildURl(String ticker, LocalDate fromDate, LocalDate toDate, StandardPeriodType periodType)
+	private String buildURL(String ticker, LocalDate fromDate, LocalDate toDate, StandardPeriodType periodType)
 			throws StockServiceException, UnsupportedEncodingException {
 
 		StringBuilder url = new StringBuilder(HISTQUOTES_BASE_URL);
