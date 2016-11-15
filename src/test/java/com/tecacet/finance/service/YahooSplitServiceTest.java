@@ -28,12 +28,16 @@ public class YahooSplitServiceTest {
 	@Test
 	public void testReverseSplit() throws StockServiceException {
 		YahooSplitService splitService= new YahooSplitService();
-		List<Split> splits = splitService.getSplitHistory("PSID", LocalDate.of(2005,1,1), LocalDate.of(2015, 12, 31));
-		assertEquals(1, splits.size());
-		Split split = splits.get(0);
-		assertEquals("1:25", split.toString());
-		assertTrue(split.isReverse());
-		assertEquals(LocalDate.of(2013, 4, 23), split.getDate());
+		List<Split> splits = splitService.getSplitHistory("ZSL", LocalDate.of(2005,1,1), LocalDate.of(2015, 12, 31));
+		assertEquals(4, splits.size());
+		Split split1 = splits.get(0);
+		assertEquals("2:1", split1.toString());
+		assertFalse(split1.isReverse());
+		assertEquals(LocalDate.of(2015, 11, 13), split1.getDate());
+		Split split4 = splits.get(3);
+        assertEquals("1:10", split4.toString());
+        assertTrue(split4.isReverse());
+        assertEquals(LocalDate.of(2010, 4, 15), split4.getDate());
 	}
 
 }
