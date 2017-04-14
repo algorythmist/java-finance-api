@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class StockPrice implements Serializable {
-	
-	private static final long serialVersionUID = -781204437469323656L;
 
 	private LocalDate date; 
 	private double open;

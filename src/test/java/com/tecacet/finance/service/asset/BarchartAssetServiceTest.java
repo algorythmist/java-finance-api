@@ -1,4 +1,4 @@
-package com.tecacet.finance.service;
+package com.tecacet.finance.service.asset;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -9,6 +9,8 @@ import java.util.Set;
 import org.junit.Test;
 
 import com.tecacet.finance.model.Asset;
+import com.tecacet.finance.service.asset.AssetService;
+import com.tecacet.finance.service.asset.BarchartAssetService;
 
 public class BarchartAssetServiceTest {
 

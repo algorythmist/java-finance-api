@@ -1,4 +1,4 @@
-package com.tecacet.finance.service;
+package com.tecacet.finance.service.asset;
 
 import java.io.IOException;
 import java.util.Set;
