@@ -14,7 +14,7 @@ import com.tecacet.finance.service.currency.GrandtrunkCurrencyExchangeService;
 public class GrandtrunkCurrencyExchangeServiceTest {
 
 	@Test
-	public void getExchangeRate() throws ExchangeRateException {
+	public void getExchangeRate() throws Exception {
 		CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
 		double rate;
 		Date date = new GregorianCalendar(2014, 1, 12).getTime();
@@ -24,7 +24,7 @@ public class GrandtrunkCurrencyExchangeServiceTest {
 	}
 
 	@Test
-	public void getCurrentExchangeRate() throws ExchangeRateException {
+	public void getCurrentExchangeRate() throws Exception {
 		CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
 		double rate;
 
@@ -34,7 +34,7 @@ public class GrandtrunkCurrencyExchangeServiceTest {
 	}
 
 	@Test(expected = ExchangeRateException.class)
-	public void testBadCurrency() throws ExchangeRateException {
+	public void testBadCurrency() throws Exception {
 		CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
 		exchangeService.getCurrentExchangeRate("USX", "GBP");
 	}

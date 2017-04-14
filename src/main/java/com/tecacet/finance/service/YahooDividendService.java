@@ -7,8 +7,6 @@ import java.net.URLEncoder;
 import java.time.LocalDate;
 import java.util.Map;
 
-import javax.ws.rs.core.Response;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,10 +29,9 @@ public class YahooDividendService implements DividendService {
 		try {
 			String url = buildDividendURL(ticker, fromDate, toDate);
 			logger.info(url);
-			Response response = WebUtil.getURLResponse(url);
-			InputStream is = response.readEntity(InputStream.class);
+			InputStream is = WebUtil.getResponseAsStream(url);
 			return dividendParser.readDividends(is);
-		} catch (IOException | WebServiceException e) {
+		} catch (IOException e) {
 			throw new StockServiceException(e);
 		}
 	}

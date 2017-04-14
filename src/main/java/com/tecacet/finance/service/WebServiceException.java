@@ -1,22 +1,13 @@
 package com.tecacet.finance.service;
 
-import javax.ws.rs.core.Response;
+import java.io.IOException;
 
-public class WebServiceException extends Exception {
+public class WebServiceException extends IOException {
 
-    private static final long serialVersionUID = 3435491867108786091L;
-    
-    private final Response response;
-
-    public WebServiceException(Response response) {
-        super(response.getStatusInfo().getReasonPhrase());
-        this.response = response;
+    public WebServiceException(String message) {
+        super(message);
     }
 
-    public Response getResponse() {
-        return response;
-    }
-    
     
 
 }

@@ -12,8 +12,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.core.Response;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,10 +30,9 @@ public class YahooSplitService {
         try {
             String url = buildURL(ticker, fromDate, toDate);
             logger.info(url);
-            Response response = WebUtil.getURLResponse(url);
-            InputStream is = response.readEntity(InputStream.class);
+            InputStream is = WebUtil.getResponseAsStream(url);
             return parse(is);
-        } catch (IOException | WebServiceException e) {
+        } catch (IOException e) {
             throw new StockServiceException(e);
         }
     }

@@ -1,5 +1,6 @@
 package com.tecacet.finance.service.currency;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,20 +26,19 @@ public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeServic
 
     @Override
     public double getExchangeRate(String fromCurrencyCode, String toCurrencyCode, Date date)
-            throws ExchangeRateException {
+            throws ExchangeRateException, IOException {
         DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
         String url = String.format(HISTORICAL_RATE_URL, dateFormat.format(date), fromCurrencyCode, toCurrencyCode);
         return getServiceResponse(url);
     }
     
     @Override
-    public double getCurrentExchangeRate(String fromCurrencyCode, String toCurrencyCode) throws ExchangeRateException {
+    public double getCurrentExchangeRate(String fromCurrencyCode, String toCurrencyCode) throws ExchangeRateException, IOException {
         String url = String.format(CURRENT_RATE_URL, fromCurrencyCode, toCurrencyCode);
-
         return getServiceResponse(url);
     }
 
-    private double getServiceResponse(String url) throws ExchangeRateException {
+    private double getServiceResponse(String url) throws ExchangeRateException, IOException {
         String responseAsText;
         try {
             responseAsText = WebUtil.getResponseAsString(url);

@@ -33,7 +33,7 @@ public class YahooDividendServiceTest {
         DividendService dividendService = new YahooDividendService();
         Map<LocalDate, Double> dividends =
                 dividendService.getHistoricalDividends("AGG", LocalDate.of(2000, 1, 1), LocalDate.of(2016, 11, 9));
-        assertEquals(156, dividends.size());
+        assertEquals(157, dividends.size());
     }
 
 }

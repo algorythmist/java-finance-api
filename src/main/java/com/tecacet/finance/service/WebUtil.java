@@ -1,33 +1,32 @@
 package com.tecacet.finance.service;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Invocation;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.stream.Collectors;
 
 public class WebUtil {
 
-    private static final int OK = 200;
-
-    public static String getResponseAsString(String url) throws WebServiceException {
-        Response response = getURLResponse(url);
-        return response.readEntity(String.class);
-    }
-    
-    public static Response getURLResponse(String url) throws WebServiceException {
-        Client client = ClientBuilder.newClient();
-        WebTarget webTarget = client.target(url);
-        Invocation.Builder invocationBuilder = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
-        Response response = invocationBuilder.get();
-        int status = response.getStatus();
-        if (status != OK) {
-            throw new WebServiceException(response);
+	public static String getResponseAsString(String urlString) throws IOException {
+		InputStream is = getResponseAsStream(urlString);
+		try (BufferedReader buffer = new BufferedReader(new InputStreamReader(is))) {
+            return buffer.lines().collect(Collectors.joining("\n"));
         }
-        return response;
-    }
+	}
 
-  
+	public static InputStream getResponseAsStream(String urlString) throws IOException {
+		URL url = new URL(urlString);
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.connect();
+		if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
+			String message = String.format("Connect to %s failed with response code %d and message: %s", urlString,
+					connection.getResponseCode(), connection.getResponseMessage());
+			throw new WebServiceException(message);
+		}
+		return connection.getInputStream();
+	}
 
 }
