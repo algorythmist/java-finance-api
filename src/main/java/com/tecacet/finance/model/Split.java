@@ -33,6 +33,6 @@ public class Split {
 	
 	@Override
 	public String toString() {
-		return String.format("%d:%d", numerator, denominator);
+		return String.format("%d:%d on %s", numerator, denominator, date);
 	}
 }

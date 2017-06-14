@@ -9,8 +9,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.tecacet.finance.io.parser.YahooPriceParser;
 import com.tecacet.finance.model.StockPrice;
+import com.tecacet.finance.service.yahoo.YahooPriceParser;
 
 public class YahooPriceParserTest {
 
@@ -18,7 +18,7 @@ public class YahooPriceParserTest {
 	public void testParseStockHistory() throws IOException {
 		YahooPriceParser parser = new YahooPriceParser();
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("TSLA.csv");
-		List<StockPrice> prices = parser.parseStockHistory(is);
+		List<StockPrice> prices = parser.parse(is);
 		assertEquals(502, prices.size());
 		StockPrice first = prices.get(0);
 		assertEquals(150.43, first.getAdjustedClose(),0.001);

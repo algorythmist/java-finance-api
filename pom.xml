@@ -11,8 +11,8 @@
 		<jflat.version>2.0.0-SNAPSHOT</jflat.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<junit.version>4.12</junit.version>
-		<jacoco.version>0.7.7.201606060606</jacoco.version>
-		<coverage.totalLineRate>0.90</coverage.totalLineRate>
+		<jacoco.version>0.7.9</jacoco.version>
+		<coverage.totalLineRate>0.87</coverage.totalLineRate>
 		<coverage.missedclasses>0</coverage.missedclasses>
 	</properties>
 

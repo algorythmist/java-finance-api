@@ -1,4 +1,4 @@
-package com.tecacet.finance.io.parser;
+package com.tecacet.finance.service.yahoo;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +11,7 @@ import com.tecacet.jflat.DefaultCSVReader;
 
 public class YahooDividendParser {
 
-    public Map<LocalDate, Double> readDividends(InputStream is) throws IOException {
+    public Map<LocalDate, Double> parse(InputStream is) throws IOException {
         Map<LocalDate, Double> dividends = new TreeMap<>();
         CSVReader<String[]> csvReader = new DefaultCSVReader();
         csvReader.skipHeader();

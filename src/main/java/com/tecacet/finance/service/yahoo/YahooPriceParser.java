@@ -1,4 +1,4 @@
-package com.tecacet.finance.io.parser;
+package com.tecacet.finance.service.yahoo;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,9 +15,22 @@ public class YahooPriceParser {
 			"low", "adjustedClose" };
 	private final static String[] PRICE_COLUMNS = new String[] { "Date", "Open", "Close", "Volume", "High", "Low",
 			"Adj Close" };
+	
+	private final String[] properties;
+	private final String[] columns;
+	
+	public YahooPriceParser() {
+		this(PRICE_PROPERTIES, PRICE_COLUMNS);
+	}
 
-	public List<StockPrice> parseStockHistory(InputStream is) throws IOException {
-		CSVReader<StockPrice> csvReader = new CSVReader<StockPrice>(StockPrice.class, PRICE_PROPERTIES, PRICE_COLUMNS);
+	public YahooPriceParser(String[] properties, String[] columns) {
+		super();
+		this.properties = properties;
+		this.columns = columns;
+	}
+
+	public List<StockPrice> parse(InputStream is) throws IOException {
+		CSVReader<StockPrice> csvReader = new CSVReader<StockPrice>(StockPrice.class, properties, columns);
 		csvReader.getConverterRegistry().registerConverter(LocalDate.class,getLocalDateConverter());
 		return csvReader.readAll(is);
 	}

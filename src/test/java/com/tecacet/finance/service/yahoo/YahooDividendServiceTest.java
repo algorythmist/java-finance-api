@@ -1,4 +1,4 @@
-package com.tecacet.finance.service;
+package com.tecacet.finance.service.yahoo;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,6 +7,9 @@ import java.time.LocalDate;
 import java.util.Map;
 
 import org.junit.Test;
+
+import com.tecacet.finance.service.DividendService;
+import com.tecacet.finance.service.StockServiceException;
 
 public class YahooDividendServiceTest {
 
