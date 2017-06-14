@@ -5,6 +5,25 @@
 	<artifactId>jfapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<name>JFApi</name>
+	<description>
+		JFApi connects to various Web Services that provide financial data such as stock prices, 
+		splits, dividends, and FX rates.
+	</description>
+	
+	<url>https://github.com/algorythmist/JFApi/</url>
+	
+	<developers>
+		<developer>
+			<name>Dimitri Papaioannou</name>
+		</developer>
+	</developers>
+
+	<organization>
+		<name>TecAceT</name>
+		<url>http://www.tecacet.com</url>
+	</organization>
+
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
