@@ -10,9 +10,9 @@
 		JFApi connects to various Web Services that provide financial data such as stock prices, 
 		splits, dividends, and FX rates.
 	</description>
-	
+
 	<url>https://github.com/algorythmist/JFApi/</url>
-	
+
 	<developers>
 		<developer>
 			<name>Dimitri Papaioannou</name>
@@ -23,7 +23,7 @@
 		<name>TecAceT</name>
 		<url>http://www.tecacet.com</url>
 	</organization>
-	
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -31,11 +31,11 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<scm>
 		<url>https://github.com/algorythmist/JFApi</url>
-		<connection>git@github.com:algorythmist/JFApi.git</connection>
-		<developerConnection>git@github.com:algorythmist/JFApi.git</developerConnection>
+		<connection>scm:git:git@github.com:algorythmist/JFApi.git</connection>
+		<developerConnection>scm:git:git@github.com:algorythmist/JFApi.git</developerConnection>
 	</scm>
 
 	<ciManagement>
@@ -47,6 +47,13 @@
 		<system>GitHub</system>
 		<url>https://github.com/algorythmist/JFApi/issues</url>
 	</issueManagement>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -91,9 +98,67 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</repository>
 	</repositories>
-	
+
 	<build>
 		<plugins>
+			<!-- Sonatype deployment -->
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
+			<!--  Sign components with gpg  -->
+			<!--  
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+			<!-- Publish source code -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Publish Javadoc -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Jacoco Coverage report -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
