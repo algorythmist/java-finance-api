@@ -19,7 +19,7 @@ a bunch of freely available financial sources by writing very little code. You c
 
 ## Examples
 
-
+Get Historical Prices from Yahoo
 ```java
 StockPriceService stockPriceService = new YahooStockPriceService();
 LocalDate fromDate = LocalDate.of(2014, 1, 2);
@@ -27,3 +27,10 @@ LocalDate toDate = LocalDate.of(2014, 10, 31);
 List<StockPrice> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
 ```
 
+Getting historical prices from Google, is pretty much the same code, just different implementation
+```java
+StockPriceService stockPriceService = new GoogleStockPriceService();
+LocalDate fromDate = LocalDate.of(2014, 1, 2);
+LocalDate toDate = LocalDate.of(2014, 10, 31);
+List<StockPrice> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
+```

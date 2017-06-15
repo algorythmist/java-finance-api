@@ -11,7 +11,7 @@ import com.tecacet.finance.service.StockPriceService;
 import com.tecacet.finance.service.StockServiceException;
 import com.tecacet.finance.service.WebUtil;
 
-public class GooglePriceService implements StockPriceService {
+public class GoogleStockPriceService implements StockPriceService {
 
 	private static final String[] PROPERTIES = new String[] { "date", "open", "high", "low", "close", "volume" };
 
@@ -19,7 +19,7 @@ public class GooglePriceService implements StockPriceService {
 
 	private final StockPriceParser parser = new StockPriceParser(PROPERTIES);
 
-	public GooglePriceService() {
+	public GoogleStockPriceService() {
 		parser.registerDateFormat("d-MMM-yy");
 	}
 
