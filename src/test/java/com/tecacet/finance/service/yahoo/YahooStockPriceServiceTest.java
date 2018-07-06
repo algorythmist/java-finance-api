@@ -26,7 +26,6 @@ public class YahooStockPriceServiceTest {
 		StockPrice firstPrice = prices.get(0);
 		assertEquals(fromDate, firstPrice.getDate());
 		assertEquals(58671200, firstPrice.getVolume());
-		assertEquals(73.811, firstPrice.getAdjustedClose(), 0.001);
 		assertEquals(79.01875, firstPrice.getClose(), 0.001); 
 		assertEquals(79.5757, firstPrice.getHigh(), 0.001);
 		assertEquals(78.86, firstPrice.getLow(), 0.001);
@@ -35,7 +34,6 @@ public class YahooStockPriceServiceTest {
 		StockPrice lastPrice = prices.get(prices.size() - 1);
 		assertEquals(toDate, lastPrice.getDate());
 		assertEquals(44639300, lastPrice.getVolume());
-		assertEquals(102.561, lastPrice.getAdjustedClose(), 0.001);
 		assertEquals(108.0, lastPrice.getClose(), 0.001);
 		assertEquals(108.040, lastPrice.getHigh(), 0.001);
 		assertEquals(107.21, lastPrice.getLow(), 0.001);
