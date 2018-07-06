@@ -18,7 +18,7 @@ public class BarchartAssetServiceTest {
 	public void testGetAssets() throws IOException {
 		AssetService assetProvider = new BarchartAssetService();
 		Set<Asset> assets = assetProvider.getAssets();
-		assertEquals(34798, assets.size());
+		assertEquals(34799, assets.size());
 	}
 	
 	@Test

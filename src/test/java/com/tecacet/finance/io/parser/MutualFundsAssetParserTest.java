@@ -20,14 +20,15 @@ public class MutualFundsAssetParserTest {
 	public void testParse() throws IOException {
 		MutualFundAssetParser assetParser = new MutualFundAssetParser();
 		String file = "nasdaqtrader" + File.separator + "mfundslist.txt";
-		InputStream is = this.getClass().getClassLoader().getResourceAsStream(file);
-		
+
+		InputStream is = ClassLoader.getSystemResourceAsStream(file);
+
 		List<Asset> assets = assetParser.parse(is);
-		assertEquals(7676, assets.size());
+		assertEquals(33500, assets.size());
 		Random random = new Random();
 		Asset randomAsset = assets.get(random.nextInt(7676));
 		assertEquals(AssetType.MUTUAL_FUND, randomAsset.getAssetType());
-		
+
 	}
 
 }

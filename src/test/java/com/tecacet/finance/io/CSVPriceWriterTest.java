@@ -1,6 +1,6 @@
 package com.tecacet.finance.io;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,12 +11,11 @@ import org.junit.Test;
 
 import com.tecacet.finance.model.StockPrice;
 import com.tecacet.finance.service.yahoo.YahooPriceParser;
-import com.tecacet.jflat.LineMergerException;
 
 public class CSVPriceWriterTest {
 
     @Test
-    public void testWrite() throws LineMergerException, IOException {
+    public void testWrite() throws IOException {
         YahooPriceParser parser = new YahooPriceParser();
         InputStream is = this.getClass().getClassLoader().getResourceAsStream("TSLA.csv");
         List<StockPrice> prices = parser.parse(is);

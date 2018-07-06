@@ -3,6 +3,7 @@ package com.tecacet.finance.service.yahoo;
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class YahooDividendServiceTest {
     @Test
     public void testGetHistoricalDividends() throws StockServiceException {
         DividendService dividendService = new YahooDividendService();
-        Map<LocalDate, Double> dividends =
+        Map<LocalDate, BigDecimal> dividends =
                 dividendService.getHistoricalDividends("IBM", LocalDate.of(2014, 1, 1), LocalDate.of(2016, 1, 1));
         assertEquals(9, dividends.size());
         String[] expected = {"2014-02-06", "2014-05-07", "2014-08-06", "2014-11-06", "2015-02-06", "2015-05-06",
@@ -26,7 +27,7 @@ public class YahooDividendServiceTest {
         for (int i = 0; i < expected.length; i++) {
             LocalDate date = dates[i];
             assertEquals(expected[i], date.toString());
-            assertEquals(prices[i], dividends.get(date), 0.0001);
+            assertEquals(prices[i], dividends.get(date).doubleValue(), 0.0001);
         }
     }
 
@@ -34,7 +35,7 @@ public class YahooDividendServiceTest {
     @Test
     public void getEntireDividendHistory() throws IOException, StockServiceException {
         DividendService dividendService = new YahooDividendService();
-        Map<LocalDate, Double> dividends =
+        Map<LocalDate, BigDecimal> dividends =
                 dividendService.getHistoricalDividends("AGG", LocalDate.of(2000, 1, 1), LocalDate.of(2016, 11, 9));
         assertEquals(157, dividends.size());
     }

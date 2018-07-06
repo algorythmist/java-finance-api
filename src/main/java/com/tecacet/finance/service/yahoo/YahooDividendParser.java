@@ -2,26 +2,28 @@ package com.tecacet.finance.service.yahoo;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;
 import java.util.TreeMap;
 
-import com.tecacet.jflat.CSVReader;
-import com.tecacet.jflat.DefaultCSVReader;
+import com.tecacet.jflat8.CSVFileFormat;
+import com.tecacet.jflat8.RowRecord;
+import com.tecacet.jflat8.impl.CSVFlatFileReader;
+import com.tecacet.jflat8.impl.DefaultCSVReader;
 
 public class YahooDividendParser {
 
-    public Map<LocalDate, Double> parse(InputStream is) throws IOException {
-        Map<LocalDate, Double> dividends = new TreeMap<>();
-        CSVReader<String[]> csvReader = new DefaultCSVReader();
-        csvReader.skipHeader();
-        csvReader.readWithCallback(is, (i, tokens, bean) -> parse(dividends, tokens));
+    public Map<LocalDate, BigDecimal> parse(InputStream is) throws IOException {
+        Map<LocalDate, BigDecimal> dividends = new TreeMap<>();
+        CSVFlatFileReader<String[]> csvReader = new DefaultCSVReader((CSVFileFormat)CSVFileFormat.defaultFormat().skipHeader());
+        csvReader.read(is, (row, bean) -> parse(dividends, row));
         return dividends;
     }
 
-    private void parse(Map<LocalDate, Double> dividends, String[] tokens) {
-        LocalDate date = LocalDate.parse(tokens[0].trim());
-        double value = Double.parseDouble(tokens[1].trim());
-        dividends.put(date, value);
+    private void parse(Map<LocalDate, BigDecimal> dividends, RowRecord row) {
+        LocalDate date = LocalDate.parse(row.get(0).trim());
+        double value = Double.parseDouble(row.get(1).trim());
+        dividends.put(date, BigDecimal.valueOf(value));
     }
 }

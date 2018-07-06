@@ -1,6 +1,7 @@
 package com.tecacet.finance.service.yahoo;
 
 import java.io.InputStream;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ public class YahooDividendService extends AbstractYahooService implements Divide
 	private final YahooDividendParser parser = new YahooDividendParser();
 	
 	@Override
-	public Map<LocalDate, Double> getHistoricalDividends(String symbol, LocalDate fromDate, LocalDate toDate)
+	public Map<LocalDate, BigDecimal> getHistoricalDividends(String symbol, LocalDate fromDate, LocalDate toDate)
 			throws StockServiceException {
 		try {
 			Map<String, String> params = getRequestParams(fromDate, toDate, StandardPeriodType.DAY);
