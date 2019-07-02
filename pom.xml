@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tecacet</groupId>
 	<artifactId>jfapi</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 	<name>JFApi</name>
 	<description>
@@ -59,13 +59,18 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<jflat8.version>0.0.4-SNAPSHOT</jflat8.version>
+		<jflat8.version>0.0.4</jflat8.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<junit.version>4.12</junit.version>
 		<jacoco.version>0.8.1</jacoco.version>
 		<coverage.totalLineRate>0.87</coverage.totalLineRate>
 		<coverage.missedclasses>0</coverage.missedclasses>
-	</properties>
+        <commons-io.version>2.6</commons-io.version>
+        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+        <maven-gpg.version>1.6</maven-gpg.version>
+    </properties>
 
 	<dependencies>
 		<dependency>
@@ -73,13 +78,11 @@
 			<artifactId>jflat8</artifactId>
 			<version>${jflat8.version}</version>
 		</dependency>
-		<!-- TODO -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.6</version>
+			<version>${commons-io.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -113,7 +116,7 @@
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
+				<version>${nexus-staging-maven-plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<serverId>ossrh</serverId>
@@ -121,15 +124,10 @@
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
-			<!-- Sign components with gpg -->
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-gpg-plugin</artifactId> 
-				<version>1.5</version> <executions> <execution> <id>sign-artifacts</id> <phase>verify</phase> 
-				<goals> <goal>sign</goal> </goals> </execution> </executions> </plugin> -->
-			<!-- Publish source code -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>${maven-source-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -139,11 +137,10 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Publish Javadoc -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
+				<version>${maven-javadoc-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -153,6 +150,20 @@
 					</execution>
 				</executions>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${maven-gpg.version}</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 			<!-- Jacoco Coverage report -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
