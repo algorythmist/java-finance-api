@@ -8,10 +8,8 @@ import java.util.List;
 import org.apache.commons.io.input.BOMInputStream;
 
 import com.tecacet.finance.model.StockPrice;
-import com.tecacet.jflat8.BeanMapper;
-import com.tecacet.jflat8.CSVFileFormat;
-import com.tecacet.jflat8.impl.CSVFlatFileReader;
-import com.tecacet.jflat8.impl.HeaderBeanMapper;
+import com.tecacet.jflat.CSVReader;
+
 
 public class YahooPriceParser {
 
@@ -20,7 +18,7 @@ public class YahooPriceParser {
 	private final static String[] PRICE_COLUMNS = new String[] { "Date", "Open", "Close", "Volume", "High", "Low",
 			"Adj Close" };
 
-	private final CSVFlatFileReader<StockPrice> reader;
+	private final CSVReader<StockPrice> reader;
 
 	public YahooPriceParser() {
 		this(PRICE_PROPERTIES, PRICE_COLUMNS);
@@ -29,14 +27,14 @@ public class YahooPriceParser {
 
 	public YahooPriceParser(String[] properties, String[] columns) {
 		super();
-		BeanMapper<StockPrice> rowMapper = new HeaderBeanMapper<>(StockPrice.class, columns, properties);
-		CSVFileFormat format = CSVFileFormat.defaultHeaderFormat();
-		this.reader = new CSVFlatFileReader<>(rowMapper, format);
-		reader.registerConverter(LocalDate.class, s -> LocalDate.parse(s.toString()));
+
+//		CSVFileFormat format = CSVFileFormat.defaultHeaderFormat();
+		this.reader = CSVReader.createWithHeaderMapping(StockPrice.class, columns, properties);
+		reader.registerConverter(LocalDate.class, s -> LocalDate.parse(s));
 	}
 
 	public List<StockPrice> parse(InputStream is) throws IOException {
-		 return reader.readToList(new BOMInputStream(is));
+		 return reader.readAll(new BOMInputStream(is));
 	}
 	
 }

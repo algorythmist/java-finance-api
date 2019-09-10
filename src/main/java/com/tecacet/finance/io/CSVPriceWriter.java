@@ -1,9 +1,8 @@
 package com.tecacet.finance.io;
 
 import com.tecacet.finance.model.StockPrice;
-import com.tecacet.jflat8.CSVWriter;
+import com.tecacet.jflat.CSVWriter;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collection;
 
@@ -15,9 +14,8 @@ public class CSVPriceWriter {
 			"adjustedClose" };
 	
 	public void write(String filename, Collection<StockPrice> prices) throws IOException {
-		FileWriter fw = new FileWriter(filename);
-		CSVWriter<StockPrice> writer = new CSVWriter<>(HEADER, PROPERTIES);
-		writer.write(fw, prices);
-		fw.close();
+
+		CSVWriter writer = CSVWriter.createForProperties(PROPERTIES).withHeader(HEADER);
+		writer.writeToFile(filename, prices);
 	}
 }

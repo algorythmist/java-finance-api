@@ -10,21 +10,17 @@ import org.apache.commons.csv.CSVFormat;
 import com.tecacet.finance.model.Asset;
 import com.tecacet.finance.model.AssetType;
 import com.tecacet.finance.model.Exchange;
-import com.tecacet.jflat8.BeanMapper;
-import com.tecacet.jflat8.CSVFileFormat;
-import com.tecacet.jflat8.RowRecord;
-import com.tecacet.jflat8.impl.CSVFlatFileReader;
-import com.tecacet.jflat8.impl.HeaderBeanMapper;
-
+import com.tecacet.jflat.CSVReader;
+import com.tecacet.jflat.RowRecord;
 
 public class NasdaqAssetParser {
 
 	public List<Asset> parse(InputStream is) throws IOException {
-		BeanMapper<Asset> beanMapper = new HeaderBeanMapper<>(Asset.class, 
-				new String[] { "Symbol", "Security Name", "Round Lot Size" }, 
-				new String[] { "symbol", "name", "roundLotSize" });
-		CSVFileFormat fileFormat = new CSVFileFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withDelimiter('|'));
-		CSVFlatFileReader<Asset> reader = new CSVFlatFileReader<>(beanMapper, fileFormat);
+
+		CSVReader<Asset> reader = CSVReader.createWithHeaderMapping(Asset.class,
+				new String[] { "Symbol", "Security Name", "Round Lot Size" },
+				new String[] { "symbol", "name", "roundLotSize" })
+				.withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withDelimiter('|').withQuote(null));
 		
 		List<Asset> assets = new ArrayList<>();
 		

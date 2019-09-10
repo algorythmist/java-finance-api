@@ -6,17 +6,17 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;
 import java.util.TreeMap;
+import org.apache.commons.csv.CSVFormat;
+import com.tecacet.jflat.CSVReader;
+import com.tecacet.jflat.RowRecord;
 
-import com.tecacet.jflat8.CSVFileFormat;
-import com.tecacet.jflat8.RowRecord;
-import com.tecacet.jflat8.impl.CSVFlatFileReader;
-import com.tecacet.jflat8.impl.DefaultCSVReader;
 
 public class YahooDividendParser {
 
     public Map<LocalDate, BigDecimal> parse(InputStream is) throws IOException {
         Map<LocalDate, BigDecimal> dividends = new TreeMap<>();
-        CSVFlatFileReader<String[]> csvReader = new DefaultCSVReader((CSVFileFormat)CSVFileFormat.defaultFormat().skipHeader());
+        CSVReader<String[]> csvReader = CSVReader.createDefaultReader()
+                .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withSkipHeaderRecord());
         csvReader.read(is, (row, bean) -> parse(dividends, row));
         return dividends;
     }

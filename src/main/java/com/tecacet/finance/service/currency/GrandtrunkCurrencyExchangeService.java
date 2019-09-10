@@ -21,7 +21,7 @@ public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeServic
     private static final String DATE_FORMAT = "yyyy-MM-dd";
 
     public GrandtrunkCurrencyExchangeService() {
-        // TODO read and cache suported currencies
+        // TODO read and cache supported currencies
     }
 
     @Override
