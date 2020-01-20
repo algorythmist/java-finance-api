@@ -7,7 +7,6 @@ import org.apache.commons.io.input.BOMInputStream;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.LocalDate;
 import java.util.List;
 
 public class YahooPriceParser {
@@ -19,13 +18,11 @@ public class YahooPriceParser {
 
     public YahooPriceParser() {
         this(PRICE_PROPERTIES, PRICE_COLUMNS);
-
     }
 
     public YahooPriceParser(String[] properties, String[] columns) {
         super();
         reader = CSVReader.createWithHeaderMapping(StockPrice.class, columns, properties);
-        reader.registerConverter(LocalDate.class, s -> LocalDate.parse(s));
     }
 
     public List<StockPrice> parse(InputStream is) throws IOException {
