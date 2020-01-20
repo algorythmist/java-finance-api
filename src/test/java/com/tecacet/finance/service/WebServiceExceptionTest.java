@@ -4,9 +4,9 @@ import org.junit.Test;
 
 public class WebServiceExceptionTest {
 
-	@Test
-	public void testWebServiceException() {
-		new WebServiceException("just for coverage");
-	}
+    @Test
+    public void testWebServiceException() {
+        new WebServiceException("just for coverage");
+    }
 
 }

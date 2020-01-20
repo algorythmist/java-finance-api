@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
  * @author Stijn Strickx
  */
 public class RedirectableRequest {
@@ -18,7 +17,7 @@ public class RedirectableRequest {
 
     private int connectTimeout = 10000;
     private int readTimeout = 10000;
-    
+
     public RedirectableRequest(URL request, int protocolRedirectLimit) {
         this.request = request;
         this.protocolRedirectLimit = protocolRedirectLimit;
@@ -33,12 +32,12 @@ public class RedirectableRequest {
         boolean hasResponse = false;
         HttpURLConnection connection = null;
         URL currentRequest = this.request;
-        while(!hasResponse && (redirectCount <= this.protocolRedirectLimit)) {
+        while (!hasResponse && (redirectCount <= this.protocolRedirectLimit)) {
             connection = (HttpURLConnection) currentRequest.openConnection();
             connection.setConnectTimeout(this.connectTimeout);
             connection.setReadTimeout(this.readTimeout);
 
-            for(String requestProperty : requestProperties.keySet()) {
+            for (String requestProperty : requestProperties.keySet()) {
                 connection.addRequestProperty(requestProperty, requestProperties.get(requestProperty));
             }
 
@@ -57,9 +56,9 @@ public class RedirectableRequest {
             }
         }
 
-        if(redirectCount > this.protocolRedirectLimit) {
+        if (redirectCount > this.protocolRedirectLimit) {
             throw new IOException("Protocol redirect count exceeded for url: " + this.request.toExternalForm());
-        } else if(connection == null) {
+        } else if (connection == null) {
             throw new IOException("Unexpected error while opening connection");
         } else {
             return connection;

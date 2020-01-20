@@ -8,6 +8,4 @@ public class WebServiceException extends IOException {
         super(message);
     }
 
-    
-
 }

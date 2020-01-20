@@ -6,7 +6,6 @@ import java.util.Map;
 
 public interface DividendService {
 
-	Map<LocalDate, BigDecimal> getHistoricalDividends(String ticker, LocalDate fromDate, LocalDate toDate)
-			throws  StockServiceException;
+    Map<LocalDate, BigDecimal> getHistoricalDividends(String ticker, LocalDate fromDate, LocalDate toDate) throws StockServiceException;
 
 }
