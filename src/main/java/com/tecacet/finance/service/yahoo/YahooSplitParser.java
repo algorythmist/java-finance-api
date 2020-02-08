@@ -30,7 +30,7 @@ public class YahooSplitParser {
     public Split parse(String line) {
         String[] tokens = line.split(",");
         LocalDate date = LocalDate.parse(tokens[0].trim(), formatter);
-        String[] splitString = tokens[1].trim().split("/");
+        String[] splitString = tokens[1].trim().split(":");
         return new Split(date, Integer.parseInt(splitString[1]), Integer.parseInt(splitString[0]));
     }
 }

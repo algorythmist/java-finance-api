@@ -28,11 +28,11 @@ public class Split {
 	}
 
 	public boolean isReverse() {
-		return numerator < denominator;
+		return numerator > denominator;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("%d:%d on %s", numerator, denominator, date);
+		return String.format("%d:%d on %s", denominator, numerator, date);
 	}
 }
