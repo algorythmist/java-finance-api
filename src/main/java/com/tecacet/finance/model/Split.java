@@ -28,7 +28,7 @@ public class Split {
 	}
 
 	public boolean isReverse() {
-		return numerator < denominator;
+		return numerator > denominator;
 	}
 	
 	@Override
