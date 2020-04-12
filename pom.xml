@@ -12,49 +12,6 @@
 		splits, dividends, and FX rates.
 	</description>
 
-	<url>https://github.com/algorythmist/JFApi/</url>
-
-	<developers>
-		<developer>
-			<name>Dimitri Papaioannou</name>
-		</developer>
-	</developers>
-
-	<organization>
-		<name>TecAceT</name>
-		<url>http://www.tecacet.com</url>
-	</organization>
-
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
-	<scm>
-		<url>https://github.com/algorythmist/JFApi</url>
-		<connection>scm:git:git@github.com:algorythmist/JFApi.git</connection>
-		<developerConnection>scm:git:git@github.com:algorythmist/JFApi.git</developerConnection>
-	</scm>
-
-	<ciManagement>
-		<system>TravisCI</system>
-		<url>https://travis-ci.org/algorythmist/JFApi</url>
-	</ciManagement>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/algorythmist/JFApi/issues</url>
-	</issueManagement>
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -213,5 +170,50 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<url>https://github.com/algorythmist/JFApi/</url>
+
+	<developers>
+		<developer>
+			<name>Dimitri Papaioannou</name>
+		</developer>
+	</developers>
+
+	<organization>
+		<name>TecAceT</name>
+		<url>http://www.tecacet.com</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/algorythmist/JFApi</url>
+		<connection>scm:git:git@github.com:algorythmist/JFApi.git</connection>
+		<developerConnection>scm:git:git@github.com:algorythmist/JFApi.git</developerConnection>
+	</scm>
+
+	<ciManagement>
+		<system>TravisCI</system>
+		<url>https://travis-ci.org/algorythmist/JFApi</url>
+	</ciManagement>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/algorythmist/JFApi/issues</url>
+	</issueManagement>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 
 </project>
