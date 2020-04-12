@@ -18,7 +18,7 @@ public class YahooStockPriceServiceTest {
     @Test
     public void getPriceHistory() throws StockServiceException {
         LocalDate fromDate = LocalDate.of(2014, 1, 2);
-        LocalDate toDate = LocalDate.of(2014, 10, 31);
+        LocalDate toDate = LocalDate.of(2014, 11, 1);
         StockPriceService stockPriceService = new YahooStockPriceService();
         List<StockPrice> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
         assertEquals(211, prices.size());
@@ -32,7 +32,7 @@ public class YahooStockPriceServiceTest {
         assertEquals(79.3828, firstPrice.getOpen(), 0.001);
 
         StockPrice lastPrice = prices.get(prices.size() - 1);
-        assertEquals(toDate, lastPrice.getDate());
+        assertEquals(LocalDate.of(2014, 10,31), lastPrice.getDate());
         assertEquals(44639300, lastPrice.getVolume());
         assertEquals(108.0, lastPrice.getClose(), 0.001);
         assertEquals(108.040, lastPrice.getHigh(), 0.001);
