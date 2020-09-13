@@ -82,7 +82,7 @@ public class CrumbManager {
         }
     }
 
-    public static void refresh() throws IOException {
+    private static void refresh() throws IOException {
         setCookie();
         setCrumb();
     }
