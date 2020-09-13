@@ -1,11 +1,13 @@
 package com.tecacet.finance.service.currency;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class GrandtrunkCurrencyExchangeServiceTest {
 
@@ -35,4 +37,10 @@ public class GrandtrunkCurrencyExchangeServiceTest {
         exchangeService.getCurrentExchangeRate("USX", "GBP");
     }
 
+    @Test
+    public void getSupportedCurrencies() throws ExchangeRateException {
+        GrandtrunkCurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
+        List<String> currencies = exchangeService.getSupportedCurrencies();
+        assertEquals("AED", currencies.get(0));
+    }
 }
