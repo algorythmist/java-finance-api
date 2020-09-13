@@ -26,10 +26,10 @@ public class OtherAssetParser {
 
     private final CSVReader<Asset> reader = CSVReader
             .createWithHeaderMapping(Asset.class, new String[] {"ACT Symbol", "Security Name", "Round Lot Size", "ETF", "Exchange"},
-            new String[] {"symbol", "name", "roundLotSize", "assetType", "exchange"})
+                    new String[] {"symbol", "name", "roundLotSize", "assetType", "exchange"})
             .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withDelimiter('|'))
             .registerConverter(AssetType.class, s -> isETF(s) ? AssetType.ETF : AssetType.STOCK)
-            .registerConverter(Exchange.class, s -> EXCHNAGE_MAP.get(s));
+            .registerConverter(Exchange.class, EXCHNAGE_MAP::get);
 
     public List<Asset> parse(InputStream fis) throws IOException {
         List<Asset> assets = reader.readAll(fis);
