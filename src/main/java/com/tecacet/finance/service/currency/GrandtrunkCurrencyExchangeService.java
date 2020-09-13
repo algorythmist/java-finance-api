@@ -25,7 +25,7 @@ public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeServic
     public List<String> getSupportedCurrencies() throws ExchangeRateException {
         try {
             String responseAsText = WebUtil.getResponseAsString(SUPPORTED_CURRENCIES_URL);
-            return Arrays.asList(responseAsText.split(","));
+            return Arrays.asList(responseAsText.split("\\r?\\n"));
         } catch (IOException e) {
             throw new ExchangeRateException(e);
         }
