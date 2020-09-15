@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.tecacet.finance.model.StockPrice;
+import com.tecacet.finance.model.Quote;
 import com.tecacet.finance.service.yahoo.YahooPriceParser;
 
 public class CSVPriceWriterTest {
@@ -18,7 +18,7 @@ public class CSVPriceWriterTest {
     public void testWrite() throws IOException {
         YahooPriceParser parser = new YahooPriceParser();
         InputStream is = this.getClass().getClassLoader().getResourceAsStream("TSLA.csv");
-        List<StockPrice> prices = parser.parse(is);
+        List<Quote> prices = parser.parse(is);
         CSVPriceWriter priceWriter = new CSVPriceWriter();
         priceWriter.write("TEST.csv", prices);
 

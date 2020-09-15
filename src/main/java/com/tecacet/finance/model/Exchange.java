@@ -6,5 +6,5 @@ public enum Exchange {
     NYSE,
     NYSE_MKT,
     NYSE_ARCA,
-    BATS;
+    BATS
 }

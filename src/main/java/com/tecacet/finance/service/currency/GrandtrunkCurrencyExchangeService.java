@@ -6,13 +6,15 @@ import com.tecacet.finance.service.WebUtil;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeService {
 
     private final static String REQUEST_FAILED = "False";
-    // TODO private static final String SUPPORTED_CURRENCIES_URL =
-    // "http://currencies.apps.grandtrunk.net/currencies[/<date>]";
+
+    private static final String SUPPORTED_CURRENCIES_URL = "http://currencies.apps.grandtrunk.net/currencies";
 
     private static final String CURRENT_RATE_URL = "http://currencies.apps.grandtrunk.net/getlatest/%s/%s";
 
@@ -20,8 +22,14 @@ public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeServic
 
     private static final String DATE_FORMAT = "yyyy-MM-dd";
 
-    public GrandtrunkCurrencyExchangeService() {
-        // TODO read and cache suported currencies
+    public List<String> getSupportedCurrencies() throws ExchangeRateException {
+        try {
+            String responseAsText = WebUtil.getResponseAsString(SUPPORTED_CURRENCIES_URL);
+            return Arrays.asList(responseAsText.split("\\r?\\n"));
+        } catch (IOException e) {
+            throw new ExchangeRateException(e);
+        }
+
     }
 
     @Override

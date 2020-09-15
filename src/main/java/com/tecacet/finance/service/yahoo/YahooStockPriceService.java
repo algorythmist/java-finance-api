@@ -1,7 +1,7 @@
 package com.tecacet.finance.service.yahoo;
 
 import com.tecacet.finance.model.StandardPeriodType;
-import com.tecacet.finance.model.StockPrice;
+import com.tecacet.finance.model.Quote;
 import com.tecacet.finance.service.StockPriceService;
 import com.tecacet.finance.service.StockServiceException;
 
@@ -18,7 +18,7 @@ public class YahooStockPriceService extends AbstractYahooService implements Stoc
     private final YahooPriceParser parser = new YahooPriceParser(PRICE_PROPERTIES, PRICE_COLUMNS);
 
     @Override
-    public List<StockPrice> getPriceHistory(String symbol, LocalDate fromDate, LocalDate toDate, StandardPeriodType periodType) throws StockServiceException {
+    public List<Quote> getPriceHistory(String symbol, LocalDate fromDate, LocalDate toDate, StandardPeriodType periodType) throws StockServiceException {
         try {
             Map<String, String> params = getRequestParams(fromDate, toDate, periodType);
             InputStream is = getUrlStream(symbol, params);

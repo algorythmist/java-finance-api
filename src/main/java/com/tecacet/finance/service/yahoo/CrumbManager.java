@@ -11,9 +11,6 @@ import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Stijn on 23/05/2017.
- */
 public class CrumbManager {
 
     private static final String HISTQUOTES2_CRUMB = System.getProperty("yahoofinance.crumb", "");
@@ -85,7 +82,7 @@ public class CrumbManager {
         }
     }
 
-    public static void refresh() throws IOException {
+    private static void refresh() throws IOException {
         setCookie();
         setCrumb();
     }

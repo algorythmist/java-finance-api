@@ -1,6 +1,6 @@
 package com.tecacet.finance.service.yahoo;
 
-import com.tecacet.finance.model.StockPrice;
+import com.tecacet.finance.model.Quote;
 import com.tecacet.jflat.CSVReader;
 
 import org.apache.commons.io.input.BOMInputStream;
@@ -14,7 +14,7 @@ public class YahooPriceParser {
     private final static String[] PRICE_PROPERTIES = new String[] {"date", "open", "close", "volume", "high", "low", "adjustedClose"};
     private final static String[] PRICE_COLUMNS = new String[] {"Date", "Open", "Close", "Volume", "High", "Low", "Adj Close"};
 
-    private final CSVReader<StockPrice> reader;
+    private final CSVReader<Quote> reader;
 
     public YahooPriceParser() {
         this(PRICE_PROPERTIES, PRICE_COLUMNS);
@@ -22,10 +22,10 @@ public class YahooPriceParser {
 
     public YahooPriceParser(String[] properties, String[] columns) {
         super();
-        reader = CSVReader.createWithHeaderMapping(StockPrice.class, columns, properties);
+        reader = CSVReader.createWithHeaderMapping(Quote.class, columns, properties);
     }
 
-    public List<StockPrice> parse(InputStream is) throws IOException {
+    public List<Quote> parse(InputStream is) throws IOException {
         return reader.readAll(new BOMInputStream(is));
     }
 

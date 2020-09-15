@@ -69,7 +69,6 @@ public abstract class AbstractYahooService {
         return sb.toString();
     }
 
-
     private long toSeconds(LocalDate date) {
         ZoneId zoneId = ZoneId.of("America/New_York");
         return date.atStartOfDay(zoneId).toEpochSecond();
