@@ -1,5 +1,7 @@
 package com.tecacet.finance.service;
 
+import com.tecacet.finance.service.WebServiceException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

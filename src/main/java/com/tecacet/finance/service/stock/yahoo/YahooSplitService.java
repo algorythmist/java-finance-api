@@ -1,9 +1,9 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import com.tecacet.finance.model.Split;
 import com.tecacet.finance.model.StandardPeriodType;
-import com.tecacet.finance.service.SplitService;
-import com.tecacet.finance.service.StockServiceException;
+import com.tecacet.finance.service.stock.SplitService;
+import com.tecacet.finance.service.stock.StockServiceException;
 
 import java.io.InputStream;
 import java.time.LocalDate;

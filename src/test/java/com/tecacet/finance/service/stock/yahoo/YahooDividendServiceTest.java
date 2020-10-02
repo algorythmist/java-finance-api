@@ -1,13 +1,13 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import static org.junit.Assert.assertEquals;
 
-import com.tecacet.finance.service.DividendService;
-import com.tecacet.finance.service.StockServiceException;
+import com.tecacet.finance.service.stock.DividendService;
+import com.tecacet.finance.service.stock.StockServiceException;
+import com.tecacet.finance.service.stock.yahoo.YahooDividendService;
 
 import org.junit.Test;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;

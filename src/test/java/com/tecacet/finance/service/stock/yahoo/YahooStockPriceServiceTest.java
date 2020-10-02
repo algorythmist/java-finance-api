@@ -1,11 +1,12 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import static org.junit.Assert.assertEquals;
 
 import com.tecacet.finance.model.StandardPeriodType;
 import com.tecacet.finance.model.Quote;
-import com.tecacet.finance.service.StockPriceService;
-import com.tecacet.finance.service.StockServiceException;
+import com.tecacet.finance.service.stock.StockPriceService;
+import com.tecacet.finance.service.stock.StockServiceException;
+import com.tecacet.finance.service.stock.yahoo.YahooStockPriceService;
 
 import org.junit.Test;
 

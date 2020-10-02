@@ -1,4 +1,4 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;

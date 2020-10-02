@@ -1,4 +1,4 @@
-package com.tecacet.finance.service;
+package com.tecacet.finance.service.stock;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

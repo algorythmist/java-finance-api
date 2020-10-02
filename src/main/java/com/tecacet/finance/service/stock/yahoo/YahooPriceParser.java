@@ -1,4 +1,4 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import com.tecacet.finance.model.Quote;
 import com.tecacet.jflat.CSVReader;

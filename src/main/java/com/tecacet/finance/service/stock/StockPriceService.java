@@ -1,4 +1,4 @@
-package com.tecacet.finance.service;
+package com.tecacet.finance.service.stock;
 
 import com.tecacet.finance.model.StandardPeriodType;
 import com.tecacet.finance.model.Quote;

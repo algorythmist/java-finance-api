@@ -69,11 +69,11 @@ public class TradierTradingDayService {
         return content;
     }
 
-    SortedSet<Day> getHolidays(List<Day> days) {
+     public SortedSet<Day> getHolidays(List<Day> days) {
         return days.stream().filter(Day::isHoliday).collect(Collectors.toCollection(TreeSet::new));
     }
 
-    SortedSet<Day> getEarlyCloseDays(List<Day> days) {
+    public SortedSet<Day> getEarlyCloseDays(List<Day> days) {
         return days.stream().filter(Day::isEarlyClose).collect(Collectors.toCollection(TreeSet::new));
     }
 }

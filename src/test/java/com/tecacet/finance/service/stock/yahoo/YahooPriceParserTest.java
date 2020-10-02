@@ -1,8 +1,9 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import static org.junit.Assert.assertEquals;
 
 import com.tecacet.finance.model.Quote;
+import com.tecacet.finance.service.stock.yahoo.YahooPriceParser;
 
 import org.junit.Test;
 

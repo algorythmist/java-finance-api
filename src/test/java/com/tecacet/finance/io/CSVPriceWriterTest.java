@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.Test;
 
 import com.tecacet.finance.model.Quote;
-import com.tecacet.finance.service.yahoo.YahooPriceParser;
+import com.tecacet.finance.service.stock.yahoo.YahooPriceParser;
 
 public class CSVPriceWriterTest {
 

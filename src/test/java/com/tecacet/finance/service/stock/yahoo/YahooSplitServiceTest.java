@@ -1,12 +1,13 @@
-package com.tecacet.finance.service.yahoo;
+package com.tecacet.finance.service.stock.yahoo;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.tecacet.finance.model.Split;
-import com.tecacet.finance.service.SplitService;
-import com.tecacet.finance.service.StockServiceException;
+import com.tecacet.finance.service.stock.SplitService;
+import com.tecacet.finance.service.stock.StockServiceException;
+import com.tecacet.finance.service.stock.yahoo.YahooSplitService;
 
 import org.junit.Test;
 
