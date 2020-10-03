@@ -69,7 +69,7 @@ public class TradierTradingDayService {
         return content;
     }
 
-     public SortedSet<Day> getHolidays(List<Day> days) {
+    public SortedSet<Day> getHolidays(List<Day> days) {
         return days.stream().filter(Day::isHoliday).collect(Collectors.toCollection(TreeSet::new));
     }
 
