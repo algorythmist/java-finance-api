@@ -1,16 +1,14 @@
 package com.tecacet.finance.services.holiday;
 
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
-public class EnricoHolidayServiceTest  {
+public class EnricoHolidayServiceTest {
 
     EnricoHolidayService holidayService = new EnricoHolidayService();
 
@@ -25,8 +23,8 @@ public class EnricoHolidayServiceTest  {
                 country.getHolidayTypes().toString());
         assertEquals("[act, qld, nsw, nt, sa, tas, vic, wa]",
                 country.getRegions().toString());
-        assertEquals(LocalDate.of(2011,1 ,1), country.getFromDate());
-        assertEquals(LocalDate.of(32767,12 ,31), country.getToDate());
+        assertEquals(LocalDate.of(2011, 1, 1), country.getFromDate());
+        assertEquals(LocalDate.of(32767, 12, 31), country.getToDate());
     }
 
     @Test
@@ -34,11 +32,14 @@ public class EnricoHolidayServiceTest  {
         List<CountryHolidays> countries =
                 holidayService.whereIsPublicHoliday(LocalDate.of(2025, 7, 5));
         assertEquals(3, countries.size());
+        CountryHolidays countryHolidays = countries.get(0);
+        assertEquals("Czech Republic", countryHolidays.getCountryName());
+        assertEquals("cze", countryHolidays.getCountryCode());
+        assertEquals(2, countryHolidays.getHolidays().size());
     }
 
     @Test
     public void getHolidaysForYear() throws IOException {
-
 
         List<Holiday> holidays = holidayService.getHolidaysForYear(2015, "usa");
         assertEquals(10, holidays.size());
@@ -56,5 +57,7 @@ public class EnricoHolidayServiceTest  {
                 "usa"
         );
         assertEquals(21, holidays.size());
+        Holiday holiday = holidays.get(0);
+        assertEquals("postal_holiday", holiday.getHolidayType());
     }
 }

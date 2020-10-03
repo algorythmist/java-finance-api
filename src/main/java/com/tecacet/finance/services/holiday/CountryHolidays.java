@@ -16,11 +16,11 @@ public class CountryHolidays {
         return countryCode;
     }
 
-    public String fullCountryName() {
+    public String getCountryName() {
         return countryFullName;
     }
 
-    public List<HolidayInfo> getHolidayName() {
+    public List<HolidayInfo> getHolidays() {
         return holidayName;
     }
 }
