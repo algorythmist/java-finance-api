@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tecacet</groupId>
 	<artifactId>jfapi</artifactId>
-	<version>1.1.0-SNAPSHOT</version>
+	<version>1.1.1-SNAPSHOT</version>
 
 	<name>JFApi</name>
 	<description>
@@ -24,7 +24,7 @@
 		<junit.version>4.13.1</junit.version>
 		<jacoco.version>0.8.6</jacoco.version>
 		<coverage.totalLineRate>0.88</coverage.totalLineRate>
-		<coverage.missedclasses>0</coverage.missedclasses>
+		<coverage.missedclasses>1</coverage.missedclasses>
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
@@ -180,7 +180,6 @@
 		</plugins>
 	</build>
 
-
 	<developers>
 		<developer>
 			<name>Dimitri Papaioannou</name>
@@ -207,8 +206,8 @@
 	</scm>
 
 	<ciManagement>
-		<system>TravisCI</system>
-		<url>https://travis-ci.org/algorythmist/JFApi</url>
+		<system>GitGub Actions</system>
+		<url>https://github.com/algorythmist/JFApi</url>
 	</ciManagement>
 
 	<issueManagement>
