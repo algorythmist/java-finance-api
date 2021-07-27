@@ -14,7 +14,7 @@ public class CSVPriceWriter {
 
     public void write(String filename, Collection<Quote> prices) throws IOException {
         FileWriter fw = new FileWriter(filename);
-        CSVWriter<Quote> writer = CSVWriter.createForProperties(PROPERTIES);
+        CSVWriter<Quote> writer = CSVWriter.writerForProperties(PROPERTIES);
         writer.withHeader(HEADER);
         writer.write(fw, prices);
         fw.close();

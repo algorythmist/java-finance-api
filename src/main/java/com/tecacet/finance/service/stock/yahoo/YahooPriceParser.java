@@ -22,7 +22,7 @@ public class YahooPriceParser {
 
     public YahooPriceParser(String[] properties, String[] columns) {
         super();
-        reader = CSVReader.createWithHeaderMapping(Quote.class, columns, properties);
+        reader = CSVReader.readerWithHeaderMapping(Quote.class, columns, properties);
     }
 
     public List<Quote> parse(InputStream is) throws IOException {

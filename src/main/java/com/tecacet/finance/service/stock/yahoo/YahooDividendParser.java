@@ -17,7 +17,7 @@ public class YahooDividendParser {
     public Map<LocalDate, BigDecimal> parse(InputStream is) throws IOException {
         Map<LocalDate, BigDecimal> dividends = new TreeMap<>();
         CSVReader<String[]> csvReader = CSVReader
-                .createDefaultReader()
+                .defaultReader()
                 .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withSkipHeaderRecord());
         csvReader.read(is, (row, bean) -> parse(dividends, row));
         return dividends;

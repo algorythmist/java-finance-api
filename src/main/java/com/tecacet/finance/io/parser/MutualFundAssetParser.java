@@ -12,7 +12,7 @@ import java.util.List;
 public class MutualFundAssetParser {
 
     private final CSVReader<Asset> reader = CSVReader
-            .createWithHeaderMapping(Asset.class, new String[] {"Fund Symbol", "Fund Name", "Type"}, new String[] {"symbol", "name", "assetType"})
+            .readerWithHeaderMapping(Asset.class, new String[] {"Fund Symbol", "Fund Name", "Type"}, new String[] {"symbol", "name", "assetType"})
             .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withDelimiter('|').withQuote(null))
             .registerConverter(AssetType.class, s -> AssetType.MUTUAL_FUND);
 

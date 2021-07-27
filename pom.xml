@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tecacet</groupId>
 	<artifactId>jfapi</artifactId>
-	<version>1.1.1-SNAPSHOT</version>
+	<version>1.1.2-SNAPSHOT</version>
 
 	<name>JFApi</name>
 	<description>
@@ -16,13 +16,13 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<jflat.version>1.2.1</jflat.version>
+		<jflat.version>1.3.6</jflat.version>
 		<commons-io.version>2.7</commons-io.version>
 		<okhttp.version>4.9.0</okhttp.version>
 		<jackson.version>2.11.2</jackson.version>
-		<slf4j.version>1.7.30</slf4j.version>
+		<slf4j.version>1.7.31</slf4j.version>
 		<junit.version>4.13.1</junit.version>
-		<jacoco.version>0.8.6</jacoco.version>
+		<jacoco.version>0.8.7</jacoco.version>
 		<coverage.totalLineRate>0.88</coverage.totalLineRate>
 		<coverage.missedclasses>1</coverage.missedclasses>
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>

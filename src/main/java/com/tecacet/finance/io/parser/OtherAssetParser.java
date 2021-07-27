@@ -25,7 +25,7 @@ public class OtherAssetParser {
     }
 
     private final CSVReader<Asset> reader = CSVReader
-            .createWithHeaderMapping(Asset.class, new String[] {"ACT Symbol", "Security Name", "Round Lot Size", "ETF", "Exchange"},
+            .readerWithHeaderMapping(Asset.class, new String[] {"ACT Symbol", "Security Name", "Round Lot Size", "ETF", "Exchange"},
                     new String[] {"symbol", "name", "roundLotSize", "assetType", "exchange"})
             .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withDelimiter('|'))
             .registerConverter(AssetType.class, s -> isETF(s) ? AssetType.ETF : AssetType.STOCK)

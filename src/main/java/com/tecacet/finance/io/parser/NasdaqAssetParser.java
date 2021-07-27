@@ -17,7 +17,7 @@ import java.util.List;
 public class NasdaqAssetParser {
 
     private final CSVReader<Asset> reader = CSVReader.
-            createWithHeaderMapping(Asset.class, new String[] {"Symbol", "Security Name", "Round Lot Size"},
+            readerWithHeaderMapping(Asset.class, new String[] {"Symbol", "Security Name", "Round Lot Size"},
                            new String[] {"symbol", "name", "roundLotSize"})
             .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withDelimiter('|'));
 

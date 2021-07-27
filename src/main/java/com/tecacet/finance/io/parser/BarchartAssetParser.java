@@ -15,7 +15,7 @@ import java.util.List;
 
 public class BarchartAssetParser {
 
-    private final CSVReader<Asset> reader = CSVReader.createWithIndexMapping(Asset.class, new String[] {"symbol", "name"})
+    private final CSVReader<Asset> reader = CSVReader.readerWithIndexMapping(Asset.class, new String[] {"symbol", "name"})
             .withFormat(CSVFormat.DEFAULT.withDelimiter(':'));
 
     public List<Asset> parse(InputStream is, AssetType assetType) throws IOException {
