@@ -13,7 +13,7 @@ class CountryDate {
 }
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class Country {
+public class EnricoCountry {
 
     private String countryCode;
     private String fullName;

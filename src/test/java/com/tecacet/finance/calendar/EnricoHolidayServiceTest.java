@@ -2,17 +2,19 @@ package com.tecacet.finance.calendar;
 
 import static org.junit.Assert.assertEquals;
 
+import com.tecacet.finance.model.calendar.Country;
 import com.tecacet.finance.model.calendar.Holiday;
-import com.tecacet.finance.service.calendar.Country;
+import com.tecacet.finance.model.calendar.HolidaySupport;
+import com.tecacet.finance.service.calendar.EnricoCountry;
 import com.tecacet.finance.service.calendar.CountryHolidays;
 import com.tecacet.finance.service.calendar.EnricoHolidayService;
-import com.tecacet.finance.service.calendar.EnricoHoliday;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class EnricoHolidayServiceTest {
 
@@ -20,28 +22,30 @@ public class EnricoHolidayServiceTest {
 
     @Test
     public void getSupportedCountries() throws IOException {
-        List<Country> countries = holidayService.getSupportedCountries();
+        List<HolidaySupport> countries = holidayService.getSupportedCountries();
         assertEquals(53, countries.size());
-        Country country = countries.get(1);
+        HolidaySupport holidaySupport = countries.get(1);
+        Country country = holidaySupport.getCountry();
         assertEquals("aus", country.getCountryCode());
-        assertEquals("Australia", country.getFullName());
+        assertEquals("Australia", country.getCountryName());
         assertEquals("[public_holiday, school_holiday, other_day]",
-                country.getHolidayTypes().toString());
+                holidaySupport.getHolidayTypes().toString());
         assertEquals("[act, qld, nsw, nt, sa, tas, vic, wa]",
-                country.getRegions().toString());
-        assertEquals(LocalDate.of(2011, 1, 1), country.getFromDate());
-        assertEquals(LocalDate.of(32767, 12, 31), country.getToDate());
+                holidaySupport.getRegions().toString());
+        assertEquals(LocalDate.of(2011, 1, 1), holidaySupport.getFromDate());
+        assertEquals(LocalDate.of(32767, 12, 31), holidaySupport.getToDate());
     }
 
     @Test
     public void whereIsPublicHoliday() throws IOException {
-        List<CountryHolidays> countries =
+        Map<Country, List<Holiday>> countries =
                 holidayService.whereIsPublicHoliday(LocalDate.of(2025, 7, 5));
         assertEquals(3, countries.size());
-        CountryHolidays countryHolidays = countries.get(0);
-        assertEquals("Czech Republic", countryHolidays.getCountryName());
-        assertEquals("cze", countryHolidays.getCountryCode());
-        assertEquals(2, countryHolidays.getHolidays().size());
+        System.out.println(countries);
+        //Hash code is only on country code
+        List<Holiday> countryHolidays = countries.get(new Country("cze", "anything"));
+        //TODO: both of these represent Cyril and Methodius Day in different locales. Should I keep only English?
+        assertEquals(2, countryHolidays.size());
     }
 
     @Test
