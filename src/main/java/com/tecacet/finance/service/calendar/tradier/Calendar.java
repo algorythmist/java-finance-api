@@ -1,4 +1,4 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.tradier;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -16,7 +16,7 @@ class Days {
 @JsonRootName(value = "calendar")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class Calendar {
+class Calendar {
 
     private int month;
     private int year;

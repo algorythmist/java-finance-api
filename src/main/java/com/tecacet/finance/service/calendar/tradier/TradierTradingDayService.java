@@ -1,22 +1,21 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.tradier;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import com.tecacet.finance.model.calendar.TradingCalendar;
+import com.tecacet.finance.model.calendar.TradingDay;
+import com.tecacet.finance.service.calendar.TradingDayService;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class TradierTradingDayService implements TradingDayService {
@@ -34,26 +33,26 @@ public class TradierTradingDayService implements TradingDayService {
     }
 
     @Override
-    public List<Day> getDays(int year) throws IOException {
-        List<Day> list = new ArrayList<>();
+    public List<TradingDay> getTradingDays(int year) throws IOException {
+        List<TradingDay> list = new ArrayList<>();
         for (int i = 1; i < 13; i++) {
-            List<Day> days = getDays(year, i);
+            List<TradingDay> days = getTradingDays(year, i);
             list.addAll(days);
         }
         return list;
     }
 
     @Override
-    public List<Day> getDays(int year, int month) throws IOException {
-        return getCalendar(year, month).getDays();
+    public List<TradingDay> getTradingDays(int year, int month) throws IOException {
+        return getCalendar(year, month).getTradingDays();
     }
 
     @Override
-    public Calendar getCalendar(int year, int month) throws IOException {
+    public TradingCalendar getCalendar(int year, int month) throws IOException {
         String url = String.format("%s?year=%d&month=%d", CALENDAR_ENDPOINT, year, month);
         logger.info("Calling: {}", url);
         String content = execute(url);
-        return objectMapper.readValue(content, Calendar.class);
+        return toTradingCalendar(objectMapper.readValue(content, Calendar.class));
     }
 
     private String execute(String url) throws IOException {
@@ -70,13 +69,18 @@ public class TradierTradingDayService implements TradingDayService {
         return content;
     }
 
-    @Override
-    public SortedSet<Day> getHolidays(List<Day> days) {
-        return days.stream().filter(Day::isHoliday).collect(Collectors.toCollection(TreeSet::new));
+    private TradingDay toTradingDay(Day day) {
+        return TradingDay.builder()
+                .date(day.getDate())
+                .description(day.getDescription())
+                .startTime(day.getStartTime())
+                .endTime(day.getEndTime())
+                .marketStatus(day.getMarketStatus())
+                .build();
     }
 
-    @Override
-    public SortedSet<Day> getEarlyCloseDays(List<Day> days) {
-        return days.stream().filter(Day::isEarlyClose).collect(Collectors.toCollection(TreeSet::new));
+    private TradingCalendar toTradingCalendar(Calendar calendar) {
+        return new TradingCalendar(calendar.getYear(), calendar.getMonth(),
+                calendar.getDays().stream().map(this::toTradingDay).collect(Collectors.toList()));
     }
 }

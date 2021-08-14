@@ -1,8 +1,9 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.tradier;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import com.tecacet.finance.model.calendar.TradingDay;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.DayOfWeek;
@@ -11,17 +12,25 @@ import java.time.LocalTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class Day implements Comparable<Day> {
+class Day implements Comparable<Day> {
 
     enum DayStatus {
         open,
-        closed
+        closed;
+
+        public TradingDay.MarketStatus toMarketStatus() {
+            return this == open ? TradingDay.MarketStatus.OPEN : TradingDay.MarketStatus.CLOSED;
+        }
     }
 
     private LocalDate date;
     private DayStatus status;
     private String description;
     private Open open;
+
+    public TradingDay.MarketStatus getMarketStatus() {
+        return status.toMarketStatus();
+    }
 
     public String getDescription() {
         return description;
@@ -32,7 +41,7 @@ public class Day implements Comparable<Day> {
     }
 
     public LocalTime getEndTime() {
-        return open == null ? null : LocalTime.parse(open.start);
+        return open == null ? null : LocalTime.parse(open.end);
     }
 
     public LocalDate getDate() {

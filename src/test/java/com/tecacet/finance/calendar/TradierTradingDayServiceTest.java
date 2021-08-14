@@ -1,15 +1,9 @@
 package com.tecacet.finance.calendar;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
-
-import com.tecacet.finance.service.calendar.Calendar;
-import com.tecacet.finance.service.calendar.Day;
-import com.tecacet.finance.service.calendar.TradierTradingDayService;
+import com.tecacet.finance.model.calendar.TradingCalendar;
+import com.tecacet.finance.model.calendar.TradingDay;
+import com.tecacet.finance.service.calendar.TradingDayService;
+import com.tecacet.finance.service.calendar.tradier.TradierTradingDayService;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -17,28 +11,33 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
-public class TradierTradingDayServiceTest  {
+import static org.junit.Assert.*;
+
+public class TradierTradingDayServiceTest {
+
+    private final TradingDayService tradingDayService = new TradierTradingDayService();
 
     @Test
     public void getCalendar() throws IOException {
-        TradierTradingDayService tradingDayService = new TradierTradingDayService();
-        Calendar calendar = tradingDayService.getCalendar(2019, 12);
-        List<Day> days = calendar.getDays();
+
+        TradingCalendar calendar = tradingDayService.getCalendar(2019, 12);
+        List<TradingDay> days = calendar.getTradingDays();
         assertEquals(31, days.size());
-        Set<Day> holidays = tradingDayService.getHolidays(days);
+
+        Set<TradingDay> holidays = tradingDayService.getHolidays(days);
         assertEquals(1, holidays.size());
-        Day holiday = holidays.stream().findFirst().get();
+        TradingDay holiday = holidays.stream().findFirst().get();
         assertEquals(LocalDate.of(2019, 12, 25), holiday.getDate());
         assertEquals("Market is closed for Christmas Day", holiday.getDescription());
         assertTrue(holiday.isHoliday());
         assertFalse(holiday.isEarlyClose());
         assertFalse(holiday.isWeekend());
-        assertNull("", holiday.getStartTime());
-        assertNull("", holiday.getEndTime());
+        assertNull(holiday.getStartTime());
+        assertNull(holiday.getEndTime());
 
-        Set<Day> earlyCloseDays = tradingDayService.getEarlyCloseDays(days);
+        Set<TradingDay> earlyCloseDays = tradingDayService.getEarlyCloseDays(days);
         assertEquals(1, earlyCloseDays.size());
-        Day earlyDay = earlyCloseDays.stream().findFirst().get();
+        TradingDay earlyDay = earlyCloseDays.stream().findFirst().get();
 
         assertEquals(LocalDate.of(2019, 12, 24), earlyDay.getDate());
         assertEquals("Market closes early at 13:00", earlyDay.getDescription());
@@ -49,11 +48,10 @@ public class TradierTradingDayServiceTest  {
 
     @Test
     public void getDaysInYear() throws IOException {
-        TradierTradingDayService tradingDayService = new TradierTradingDayService();
-        List<Day> days = tradingDayService.getDays(2019);
-        Set<Day> holidays = tradingDayService.getHolidays(days);
+        List<TradingDay> days = tradingDayService.getTradingDays(2019);
+        Set<TradingDay> holidays = tradingDayService.getHolidays(days);
         assertEquals(9, holidays.size());
-        Set<Day> earlyCloseDays = tradingDayService.getEarlyCloseDays(days);
+        Set<TradingDay> earlyCloseDays = tradingDayService.getEarlyCloseDays(days);
         assertEquals(3, earlyCloseDays.size());
     }
 }
