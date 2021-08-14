@@ -1,9 +1,9 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.enrico;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class HolidayInfo {
+class HolidayInfo {
     String lang;
     String text;
 }

@@ -1,13 +1,10 @@
 package com.tecacet.finance.calendar;
 
-import static org.junit.Assert.assertEquals;
-
 import com.tecacet.finance.model.calendar.Country;
 import com.tecacet.finance.model.calendar.Holiday;
 import com.tecacet.finance.model.calendar.HolidaySupport;
-import com.tecacet.finance.service.calendar.EnricoCountry;
-import com.tecacet.finance.service.calendar.CountryHolidays;
-import com.tecacet.finance.service.calendar.EnricoHolidayService;
+import com.tecacet.finance.service.calendar.enrico.EnricoHolidayService;
+import com.tecacet.finance.service.calendar.HolidayService;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -16,9 +13,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import static org.junit.Assert.assertEquals;
+
 public class EnricoHolidayServiceTest {
 
-    EnricoHolidayService holidayService = new EnricoHolidayService();
+    private final HolidayService holidayService = new EnricoHolidayService();
 
     @Test
     public void getSupportedCountries() throws IOException {

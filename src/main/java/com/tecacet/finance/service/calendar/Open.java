@@ -1,4 +1,4 @@
-package com.tecacet.finance.services.tradingday;
+package com.tecacet.finance.service.calendar;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonRootName;

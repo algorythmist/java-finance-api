@@ -1,11 +1,11 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.enrico;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 import java.util.List;
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class CountryHolidays {
+class CountryHolidays {
 
     private String countryCode;
     private String countryFullName;

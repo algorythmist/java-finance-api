@@ -1,4 +1,4 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.enrico;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

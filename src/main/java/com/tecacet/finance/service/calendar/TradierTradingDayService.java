@@ -1,4 +1,4 @@
-package com.tecacet.finance.services.tradingday;
+package com.tecacet.finance.service.calendar;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,7 +19,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-public class TradierTradingDayService {
+public class TradierTradingDayService implements TradingDayService {
 
     private static final String CALENDAR_ENDPOINT = "https://api.tradier.com/v1/markets/calendar";
 
@@ -27,14 +27,13 @@ public class TradierTradingDayService {
     private final OkHttpClient httpClient = new OkHttpClient();
     private final ObjectMapper objectMapper;
 
-    private final int startYear = 2018;
-
     public TradierTradingDayService() {
         objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.configure(DeserializationFeature.UNWRAP_ROOT_VALUE, true);
     }
 
+    @Override
     public List<Day> getDays(int year) throws IOException {
         List<Day> list = new ArrayList<>();
         for (int i = 1; i < 13; i++) {
@@ -44,10 +43,12 @@ public class TradierTradingDayService {
         return list;
     }
 
+    @Override
     public List<Day> getDays(int year, int month) throws IOException {
         return getCalendar(year, month).getDays();
     }
 
+    @Override
     public Calendar getCalendar(int year, int month) throws IOException {
         String url = String.format("%s?year=%d&month=%d", CALENDAR_ENDPOINT, year, month);
         logger.info("Calling: {}", url);
@@ -69,10 +70,12 @@ public class TradierTradingDayService {
         return content;
     }
 
+    @Override
     public SortedSet<Day> getHolidays(List<Day> days) {
         return days.stream().filter(Day::isHoliday).collect(Collectors.toCollection(TreeSet::new));
     }
 
+    @Override
     public SortedSet<Day> getEarlyCloseDays(List<Day> days) {
         return days.stream().filter(Day::isEarlyClose).collect(Collectors.toCollection(TreeSet::new));
     }

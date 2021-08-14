@@ -1,4 +1,4 @@
-package com.tecacet.finance.service.calendar;
+package com.tecacet.finance.service.calendar.enrico;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
@@ -13,7 +13,7 @@ class CountryDate {
 }
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class EnricoCountry {
+class EnricoCountry {
 
     private String countryCode;
     private String fullName;
