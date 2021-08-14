@@ -1,12 +1,18 @@
-package com.tecacet.finance.services.holiday;
+package com.tecacet.finance.calendar;
 
 import static org.junit.Assert.assertEquals;
 
+import com.tecacet.finance.model.calendar.Holiday;
+import com.tecacet.finance.service.calendar.Country;
+import com.tecacet.finance.service.calendar.CountryHolidays;
+import com.tecacet.finance.service.calendar.EnricoHolidayService;
+import com.tecacet.finance.service.calendar.EnricoHoliday;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 
 public class EnricoHolidayServiceTest {
 
@@ -45,8 +51,23 @@ public class EnricoHolidayServiceTest {
         assertEquals(10, holidays.size());
 
         Holiday holiday = holidays.get(2);
-        assertEquals("postal_holiday", holiday.getHolidayType());
+        assertEquals("postal_holiday", holiday.getType());
         assertEquals(LocalDate.of(2015, 2, 16), holiday.getDate());
+        assertEquals("Presidents' Day", holiday.getDescription());
+        assertEquals(Locale.ENGLISH, holiday.getLocale());
+    }
+
+    @Test
+    public void getHolidaysForMonth() throws IOException {
+
+        List<Holiday> holidays = holidayService.getHolidaysForMonth(2020, 11, "usa");
+        assertEquals(2, holidays.size());
+
+        Holiday holiday = holidays.get(1);
+        assertEquals("postal_holiday", holiday.getType());
+        assertEquals("Thanksgiving Day", holiday.getDescription());
+        assertEquals(Locale.ENGLISH, holiday.getLocale());
+        assertEquals(LocalDate.of(2020, 11, 26), holiday.getDate());
     }
 
     @Test
@@ -58,6 +79,6 @@ public class EnricoHolidayServiceTest {
         );
         assertEquals(21, holidays.size());
         Holiday holiday = holidays.get(0);
-        assertEquals("postal_holiday", holiday.getHolidayType());
+        assertEquals("postal_holiday", holiday.getType());
     }
 }
