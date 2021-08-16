@@ -1,3 +1,5 @@
+- Enhance README
+- javadocs
 - Get current price for multiple stocks
 - Get stock attributes
 - make all objects immutable
