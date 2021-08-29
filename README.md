@@ -1,5 +1,9 @@
 # JFApi
 
+![GitHub release (latest by date)]
+
+![build]
+
 ![Coverage](../badges/jacoco.svg)
 
 ## Java Finance API
