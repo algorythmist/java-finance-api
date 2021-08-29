@@ -24,11 +24,11 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Generate Jacoco Badge
-        id: jacoco
-        uses: cicirello/jacoco-badge-generator@v2
-        with:
-          badges-directory: badges
-          generate-branches-badge: true
+      id: jacoco
+      uses: cicirello/jacoco-badge-generator@v2
+      with:
+        badges-directory: badges
+        generate-branches-badge: true
 
     - name: Log coverage percentage
       run: |
