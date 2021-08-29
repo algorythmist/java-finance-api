@@ -1,13 +1,11 @@
 package com.tecacet.finance.service.currency;
 
-import com.tecacet.finance.service.WebServiceException;
 import com.tecacet.finance.service.WebUtil;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeService {
@@ -20,7 +18,7 @@ public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeServic
 
     private static final String HISTORICAL_RATE_URL = "http://currencies.apps.grandtrunk.net/getrate/%s/%s/%s";
 
-    private static final String DATE_FORMAT = "yyyy-MM-dd";
+    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     public List<String> getSupportedCurrencies() throws ExchangeRateException {
         try {
@@ -33,23 +31,22 @@ public class GrandtrunkCurrencyExchangeService implements CurrencyExchangeServic
     }
 
     @Override
-    public double getExchangeRate(String fromCurrencyCode, String toCurrencyCode, Date date) throws ExchangeRateException, IOException {
-        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-        String url = String.format(HISTORICAL_RATE_URL, dateFormat.format(date), fromCurrencyCode, toCurrencyCode);
+    public double getExchangeRate(String fromCurrencyCode, String toCurrencyCode, LocalDate date) throws ExchangeRateException {
+        String url = String.format(HISTORICAL_RATE_URL, DATE_FORMAT.format(date), fromCurrencyCode, toCurrencyCode);
         return getServiceResponse(url);
     }
 
     @Override
-    public double getCurrentExchangeRate(String fromCurrencyCode, String toCurrencyCode) throws ExchangeRateException, IOException {
+    public double getCurrentExchangeRate(String fromCurrencyCode, String toCurrencyCode) throws ExchangeRateException {
         String url = String.format(CURRENT_RATE_URL, fromCurrencyCode, toCurrencyCode);
         return getServiceResponse(url);
     }
 
-    private double getServiceResponse(String url) throws ExchangeRateException, IOException {
+    private double getServiceResponse(String url) throws ExchangeRateException {
         String responseAsText;
         try {
             responseAsText = WebUtil.getResponseAsString(url);
-        } catch (WebServiceException e) {
+        } catch (IOException e) {
             throw new ExchangeRateException(e);
         }
         if (REQUEST_FAILED.equals(responseAsText)) {

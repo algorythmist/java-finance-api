@@ -1,5 +1,7 @@
 # JFApi
 
+![Coverage](.github/badges/jacoco.svg)
+
 ## Java Finance API
 
 Accessing financial data can be tricky, especially of you are not willing to pay for it. 

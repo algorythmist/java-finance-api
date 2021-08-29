@@ -1,6 +1,9 @@
 package com.tecacet.finance.service.currency;
 
-public class ExchangeRateException extends Exception {
+/**
+ * Exception thrown when currency conversion fails
+ */
+public class ExchangeRateException extends RuntimeException {
 
     public ExchangeRateException(String message) {
         super(message);

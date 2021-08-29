@@ -5,34 +5,34 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+import java.util.Currency;
 import java.util.List;
 
 public class GrandtrunkCurrencyExchangeServiceTest {
 
     @Test
-    public void getExchangeRate() throws Exception {
+    public void getExchangeRate() {
         CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
         double rate;
-        Date date = new GregorianCalendar(2014, 1, 12).getTime();
+        LocalDate date = LocalDate.of(2014, 1, 12);
         rate = exchangeService.getExchangeRate("USD", "GBP", date);
         assertTrue(rate < 1.0);
 
     }
 
     @Test
-    public void getCurrentExchangeRate() throws Exception {
+    public void getCurrentExchangeRate() {
         CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
         double rate;
 
-        rate = exchangeService.getCurrentExchangeRate("USD", "GBP");
+        rate = exchangeService.getCurrentExchangeRate(Currency.getInstance("USD"), Currency.getInstance("GBP"));
         assertTrue(rate < 1.0);
 
     }
 
     @Test(expected = ExchangeRateException.class)
-    public void testBadCurrency() throws Exception {
+    public void testBadCurrency() {
         CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
         exchangeService.getCurrentExchangeRate("USX", "GBP");
     }
