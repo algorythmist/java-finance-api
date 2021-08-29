@@ -1,5 +1,10 @@
 # JFApi
 
+[![Build Status](https://dev.azure.com/jacoco-org/JaCoCo/_apis/build/status/JaCoCo?branchName=master)](https://dev.azure.com/jacoco-org/JaCoCo/_build/latest?definitionId=1&branchName=master)
+[![Build status](https://ci.appveyor.com/api/projects/status/g28egytv4tb898d7/branch/master?svg=true)](https://ci.appveyor.com/project/JaCoCo/jacoco/branch/master)
+[![Maven Central](https://img.shields.io/maven-central/v/com.tecacet/jfapi.svg)](http://search.maven.org/#search|ga|1|a%3Ajfapi)
+
+
 ## Java Finance API
 
 Accessing financial data can be tricky, especially of you are not willing to pay for it. 
