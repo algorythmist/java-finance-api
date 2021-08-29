@@ -1,6 +1,6 @@
 # JFApi
 
-[![Coverage](../badges/jacoco.svg)](https://github.com/algorythmist/jfapi/actions/workflows/build.yml)
+[![Coverage](../badges/jacoco.svg)](https://github.com/algorythmist/JFApi/actions/workflows/maven.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.tecacet/jfapi.svg)](http://search.maven.org/#search|ga|1|a%3Ajfapi)
 
 
