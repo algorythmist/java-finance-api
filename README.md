@@ -1,6 +1,6 @@
 # JFApi
 
-![Coverage](.github/badges/jacoco.svg)
+![Coverage](.../badges/jacoco.svg)
 
 ## Java Finance API
 
