@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tecacet</groupId>
-    <artifactId>jfapi</artifactId>
+    <artifactId>java-finance-api</artifactId>
     <version>1.1.4-SNAPSHOT</version>
 
     <name>JFApi</name>
@@ -23,13 +23,13 @@
         <slf4j.version>1.7.31</slf4j.version>
         <junit.version>4.13.1</junit.version>
         <jacoco.version>0.8.7</jacoco.version>
-        <coverage.totalLineRate>0.88</coverage.totalLineRate>
-        <coverage.missedclasses>1</coverage.missedclasses>
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
         <maven-gpg.version>1.6</maven-gpg.version>
         <lombok.version>1.18.20</lombok.version>
+        <coverage.totalLineRate>0.88</coverage.totalLineRate>
+        <coverage.missedclasses>0</coverage.missedclasses>
     </properties>
 
     <dependencies>
@@ -163,15 +163,23 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <id>pre-unit-test</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>generate-code-coverage-report</id>
+                        <id>post-unit-test</id>
                         <phase>test</phase>
                         <goals>
                             <goal>report</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>verify</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
                         </goals>
                     </execution>
                 </executions>
