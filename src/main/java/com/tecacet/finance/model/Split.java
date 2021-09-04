@@ -1,31 +1,17 @@
 package com.tecacet.finance.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.time.LocalDate;
 
+@AllArgsConstructor
+@Getter
 public class Split {
 
     private final LocalDate date;
     private final int numerator;
     private final int denominator;
-
-    public Split(LocalDate date, int numerator, int denominator) {
-        super();
-        this.date = date;
-        this.numerator = numerator;
-        this.denominator = denominator;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
-    }
 
     public boolean isReverse() {
         return numerator > denominator;

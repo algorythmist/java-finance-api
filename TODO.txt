@@ -4,6 +4,5 @@
 - Get current price for multiple stocks
 - Get stock attributes
 - refactor common code of yahoo services
-- make all objects immutable
 - add code coverage badge
 

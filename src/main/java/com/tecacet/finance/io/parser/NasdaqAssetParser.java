@@ -20,11 +20,12 @@ public class NasdaqAssetParser {
 
     public List<Asset> parse(InputStream is) throws IOException {
         List<Asset> assets =
-                reader.readAllWithCallback(is, (row, asset) -> {
-                    asset.setAssetType(AssetType.STOCK);
-                    asset.setExchange(Exchange.NASDAQ);
-                    return asset;
-                });
+                reader.readAllWithCallback(is, (row, asset) ->
+                        asset.toBuilder()
+                                .assetType(AssetType.STOCK)
+                                .exchange(Exchange.NASDAQ)
+                                .build());
+
 
         // The last one is a footer
         assets.remove(assets.size() - 1);

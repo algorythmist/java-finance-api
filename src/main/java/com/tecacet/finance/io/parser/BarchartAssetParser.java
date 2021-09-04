@@ -16,9 +16,7 @@ public class BarchartAssetParser {
             .withFormat(CSVFormat.DEFAULT.withDelimiter(':'));
 
     public List<Asset> parse(InputStream is, AssetType assetType) throws IOException {
-        return reader.readAllWithCallback(is, (RowRecord row, Asset asset) -> {
-                    asset.setAssetType(assetType);
-                    return asset;
-                });
+        return reader.readAllWithCallback(is, (RowRecord row, Asset asset) ->
+                asset.toBuilder().assetType(assetType).build());
     }
 }
