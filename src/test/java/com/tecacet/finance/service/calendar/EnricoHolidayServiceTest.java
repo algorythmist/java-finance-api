@@ -1,10 +1,9 @@
-package com.tecacet.finance.calendar;
+package com.tecacet.finance.service.calendar;
 
 import com.tecacet.finance.model.calendar.Country;
 import com.tecacet.finance.model.calendar.Holiday;
 import com.tecacet.finance.model.calendar.HolidaySupport;
 import com.tecacet.finance.service.calendar.enrico.EnricoHolidayService;
-import com.tecacet.finance.service.calendar.HolidayService;
 import org.junit.Test;
 
 import java.io.IOException;

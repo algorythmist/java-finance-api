@@ -1,8 +1,7 @@
-package com.tecacet.finance.calendar;
+package com.tecacet.finance.service.calendar;
 
 import com.tecacet.finance.model.calendar.TradingCalendar;
 import com.tecacet.finance.model.calendar.TradingDay;
-import com.tecacet.finance.service.calendar.TradingDayService;
 import com.tecacet.finance.service.calendar.tradier.TradierTradingDayService;
 import org.junit.Test;
 

@@ -53,3 +53,28 @@ Get Historical Dividends from Yahoo
     //Get supported currencis
     List<String> currencies = exchangeService.getSupportedCurrencies();
 ```
+
+## Holidays and Trading Days
+
+Retrieve Market Trading Days
+
+```java
+    TradingDayService tradingDayService = new TradierTradingDayService();
+    //Get trading days in a year
+    List<TradingDay> days = tradingDayService.getTradingDays(2019);
+    //Extract the holidays
+    Set<TradingDay> holidays = tradingDayService.getHolidays(days);
+    //Extract the days when the market closes early
+    Set<TradingDay> earlyCloseDays = tradingDayService.getEarlyCloseDays(days);
+```
+
+Alternatively, you can retrieve holidays for a date range and country
+
+```java
+    HolidayService holidayService = new EnricoHolidayService();
+    List<HolidaySupport> countries = holidayService.getSupportedCountries();
+    List<Holiday> holidays = holidayService.getHolidaysForYear(2015, "usa");
+    //Find where a particular date is a holiday
+    Map<Country, List<Holiday>> countries =
+        holidayService.whereIsPublicHoliday(LocalDate.of(2025, 7, 5));
+```
