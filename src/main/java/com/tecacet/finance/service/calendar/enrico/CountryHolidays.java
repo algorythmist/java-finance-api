@@ -11,7 +11,6 @@ class CountryHolidays {
     private String countryFullName;
     private List<HolidayInfo> holidayName;
 
-
     public String getCountryCode() {
         return countryCode;
     }

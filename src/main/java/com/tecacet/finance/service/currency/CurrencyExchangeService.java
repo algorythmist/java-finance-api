@@ -3,6 +3,9 @@ package com.tecacet.finance.service.currency;
 import java.time.LocalDate;
 import java.util.Currency;
 
+/**
+ * Interface for services that provide currency conversion
+ */
 public interface CurrencyExchangeService {
 
     double getExchangeRate(String fromCurrencyCode, String toCurrencyCode, LocalDate date) throws ExchangeRateException;
