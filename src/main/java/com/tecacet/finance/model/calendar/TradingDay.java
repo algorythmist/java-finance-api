@@ -8,6 +8,9 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Attributes of a trading day
+ */
 @Getter
 @Builder
 public class TradingDay implements Comparable<TradingDay> {
@@ -22,14 +25,23 @@ public class TradingDay implements Comparable<TradingDay> {
     private String description;
     private MarketStatus marketStatus;
 
+    /**
+     * @return true if the market is closed on a weekday
+     */
     public boolean isHoliday() {
         return marketStatus == MarketStatus.CLOSED && !isWeekend();
     }
 
+    /**
+     * @return true if it is Saturday or Sunday
+     */
     public boolean isWeekend() {
         return date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY;
     }
 
+    /**
+     * @return true if it's an early close day
+     */
     public boolean isEarlyClose() {
         return marketStatus == MarketStatus.OPEN && endTime.isBefore(LocalTime.of(16, 0));
     }

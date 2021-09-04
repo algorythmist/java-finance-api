@@ -63,7 +63,7 @@ public class EnricoHolidayServiceTest {
     @Test
     public void getHolidaysForMonth() throws IOException {
 
-        List<Holiday> holidays = holidayService.getHolidaysForMonth(2020, 11, "usa");
+        List<Holiday> holidays = holidayService.getHolidaysForMonth(2020, 11, "USA");
         assertEquals(2, holidays.size());
 
         Holiday holiday = holidays.get(1);
@@ -71,6 +71,11 @@ public class EnricoHolidayServiceTest {
         assertEquals("Thanksgiving Day", holiday.getDescription());
         assertEquals(Locale.ENGLISH, holiday.getLocale());
         assertEquals(LocalDate.of(2020, 11, 26), holiday.getDate());
+    }
+
+    @Test(expected = IOException.class)
+    public void getHolidaysForInvalidMonth() throws IOException {
+        holidayService.getHolidaysForMonth(2020, 0, "USA");
     }
 
     @Test

@@ -44,6 +44,14 @@ public class GrandtrunkCurrencyExchangeServiceTest {
     }
 
     @Test
+    public void testWeekend() {
+        CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
+        LocalDate date = LocalDate.of(2021, 8, 4);
+        double rate = exchangeService.getExchangeRate("USD", "JPY", date);
+        assertTrue(rate > 100.0);
+    }
+
+    @Test
     public void getSupportedCurrencies() throws ExchangeRateException {
         GrandtrunkCurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
         List<String> currencies = exchangeService.getSupportedCurrencies();
