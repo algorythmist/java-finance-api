@@ -19,7 +19,10 @@ public class YahooDividendParser {
         CSVReader<String[]> csvReader = CSVReader
                 .defaultReader()
                 .withFormat(CSVFormat.DEFAULT.withFirstRecordAsHeader().withSkipHeaderRecord());
-        csvReader.read(is, (row, bean) -> parse(dividends, row));
+        csvReader.readAllWithCallback(is, (row, bean) -> {
+            parse(dividends, row);
+            return null;
+        });
         return dividends;
     }
 
