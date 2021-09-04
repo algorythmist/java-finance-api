@@ -4,4 +4,5 @@
 - Get stock attributes
 - make all objects immutable
 - refactor common code of yahoo services
+- add code coverage badge
 
