@@ -1,8 +1,9 @@
 - Enhance README
-- javadocs
+- enhance javadocs
+- publish javadocs
+
 - Get current price for multiple stocks
-- Get stock attributes
-- make all objects immutable
-- refactor common code of yahoo services
+- Get stock attributes from yahoo
+- Delayed prices from yahoo
 - add code coverage badge
 

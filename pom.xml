@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tecacet</groupId>
     <artifactId>java-finance-api</artifactId>
-    <version>1.1.4-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
 
     <name>JFApi</name>
     <description>
@@ -14,22 +14,22 @@
     <url>https://github.com/algorythmist/JFApi/</url>
 
     <properties>
+        <commons-io.version>2.7</commons-io.version>
+        <jackson.version>2.12.5</jackson.version>
+        <jacoco.version>0.8.7</jacoco.version>
+        <jflat.version>1.3.8</jflat.version>
+        <junit.version>[4.13.1,)</junit.version>
+        <lombok.version>1.18.20</lombok.version>
+        <okhttp.version>4.9.1</okhttp.version>
+        <slf4j.version>[1.7.30,)</slf4j.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <jflat.version>1.3.6</jflat.version>
-        <commons-io.version>2.7</commons-io.version>
-        <okhttp.version>4.9.0</okhttp.version>
-        <jackson.version>2.11.2</jackson.version>
-        <slf4j.version>1.7.31</slf4j.version>
-        <junit.version>4.13.1</junit.version>
-        <jacoco.version>0.8.7</jacoco.version>
+        <coverage.totalLineRate>0.90</coverage.totalLineRate>
+        <coverage.missedclasses>0</coverage.missedclasses>
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
         <maven-gpg.version>1.6</maven-gpg.version>
-        <lombok.version>1.18.20</lombok.version>
-        <coverage.totalLineRate>0.88</coverage.totalLineRate>
-        <coverage.missedclasses>0</coverage.missedclasses>
     </properties>
 
     <dependencies>
@@ -68,6 +68,7 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

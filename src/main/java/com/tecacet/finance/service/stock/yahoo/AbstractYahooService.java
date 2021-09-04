@@ -2,7 +2,6 @@ package com.tecacet.finance.service.stock.yahoo;
 
 import com.tecacet.finance.model.StandardPeriodType;
 import com.tecacet.finance.service.stock.StockServiceException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -83,7 +82,7 @@ public abstract class AbstractYahooService {
                 return "1mo";
             case YEAR:
             default:
-                throw new StockServiceException("Period not supported");
+                throw new StockServiceException("Period type " + periodType + " not supported");
         }
     }
 

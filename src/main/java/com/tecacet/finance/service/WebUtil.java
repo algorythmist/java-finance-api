@@ -1,7 +1,5 @@
 package com.tecacet.finance.service;
 
-import com.tecacet.finance.service.WebServiceException;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,8 +22,8 @@ public class WebUtil {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.connect();
         if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-            String message = String.format("Connect to %s failed with response code %d and message: %s", urlString, connection.getResponseCode(),
-                    connection.getResponseMessage());
+            String message = String.format("Connect to %s failed with response code %d and message: %s",
+                    urlString, connection.getResponseCode(), connection.getResponseMessage());
             throw new WebServiceException(message);
         }
         return connection.getInputStream();

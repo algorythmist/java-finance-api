@@ -1,5 +1,10 @@
 package com.tecacet.finance.model;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder(toBuilder = true)
 public class Asset {
 
     private String symbol;
@@ -7,34 +12,5 @@ public class Asset {
     private AssetType assetType;
     private int roundLotSize;
     private Exchange exchange;
-
-    public String getSymbol() {
-        return symbol;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public AssetType getAssetType() {
-        return assetType;
-    }
-
-    public void setAssetType(AssetType assetType) {
-        this.assetType = assetType;
-    }
-
-    public int getRoundLotSize() {
-        return roundLotSize;
-    }
-
-    public Exchange getExchange() {
-        return exchange;
-    }
-
-    public void setExchange(Exchange exchange) {
-        this.exchange = exchange;
-    }
-
 
 }

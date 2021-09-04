@@ -11,26 +11,70 @@ a bunch of freely available financial sources by writing very little code. You c
 
 ## Features
 
-- Retrieve stock prices from various sources
-- Retrieve dividend and split info from various sources
-- Retrieve information about traded assets from different sources
-- Retrieve currency exchange rates
-- other financial information available through open APIs
+- Stock prices from Yahoo Finance
+- Dividend and split history info from Yahoo Finance
+- Information about traded assets from Barchart
+- Currency exchange rates from Grandtrunk
+- Trading calendars from Enrico and Tradier
 
-## Examples
+## Yahoo Historical Prices, Dividends, and Splits
 
 Get Historical Prices from Yahoo
 ```java
-StockPriceService stockPriceService = new YahooStockPriceService();
-LocalDate fromDate = LocalDate.of(2014, 1, 2);
-LocalDate toDate = LocalDate.of(2014, 10, 31);
-List<StockPrice> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
+    StockPriceService stockPriceService = new YahooStockPriceService();
+    LocalDate fromDate = LocalDate.of(2014, 1, 2);
+    LocalDate toDate = LocalDate.of(2014, 11, 1);
+    List<Quote> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
+```
+Get Historical Splits from Yahoo
+```java
+    SplitService splitService = new YahooSplitService();
+    List<Split> splits = splitService.getSplitHistory("AAPL", LocalDate.of(2005, 1, 1), LocalDate.of(2015, 12, 31));
+        
+```
+Get Historical Dividends from Yahoo
+```java
+    DividendService dividendService = new YahooDividendService();
+    Map<LocalDate, BigDecimal> dividends = dividendService.getHistoricalDividends("AGG", LocalDate.of(2000, 1, 1), LocalDate.of(2016, 11, 9));
+    
 ```
 
-Getting historical prices from Google, is pretty much the same code, just different implementation
+## Currency Exchange Rates
+
 ```java
-StockPriceService stockPriceService = new GoogleStockPriceService();
-LocalDate fromDate = LocalDate.of(2014, 1, 2);
-LocalDate toDate = LocalDate.of(2014, 10, 31);
-List<StockPrice> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
+    CurrencyExchangeService exchangeService = new GrandtrunkCurrencyExchangeService();
+    LocalDate date = LocalDate.of(2014, 1, 12);
+    // Get Historical rate
+    double rate = exchangeService.getExchangeRate("USD", "GBP", date);
+
+    //Get current rate
+    double currentRate = exchangeService.getCurrentExchangeRate("USD", "GBP");
+
+    //Get supported currencis
+    List<String> currencies = exchangeService.getSupportedCurrencies();
+```
+
+## Holidays and Trading Days
+
+Retrieve Market Trading Days
+
+```java
+    TradingDayService tradingDayService = new TradierTradingDayService();
+    //Get trading days in a year
+    List<TradingDay> days = tradingDayService.getTradingDays(2019);
+    //Extract the holidays
+    Set<TradingDay> holidays = tradingDayService.getHolidays(days);
+    //Extract the days when the market closes early
+    Set<TradingDay> earlyCloseDays = tradingDayService.getEarlyCloseDays(days);
+```
+
+Alternatively, you can retrieve holidays for a date range and country
+
+```java
+    HolidayService holidayService = new EnricoHolidayService();
+    List<HolidaySupport> countries = holidayService.getSupportedCountries();
+    List<Holiday> holidays = holidayService.getHolidaysForYear(2015, "usa");
+    //Find where a particular date is a holiday
+    Map<Country, List<Holiday>> countries =
+        holidayService.whereIsPublicHoliday(LocalDate.of(2025, 7, 5));
 ```

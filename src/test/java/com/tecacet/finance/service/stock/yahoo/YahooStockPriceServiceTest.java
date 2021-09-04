@@ -18,9 +18,9 @@ public class YahooStockPriceServiceTest {
 
     @Test
     public void getPriceHistory() throws StockServiceException {
+        StockPriceService stockPriceService = new YahooStockPriceService();
         LocalDate fromDate = LocalDate.of(2014, 1, 2);
         LocalDate toDate = LocalDate.of(2014, 11, 1);
-        StockPriceService stockPriceService = new YahooStockPriceService();
         List<Quote> prices = stockPriceService.getPriceHistory("AAPL", fromDate, toDate, StandardPeriodType.DAY);
         assertEquals(211, prices.size());
 
@@ -49,7 +49,13 @@ public class YahooStockPriceServiceTest {
         LocalDate toDate = LocalDate.of(2014, Month.MARCH, 31);
         StockPriceService stockPriceService = new YahooStockPriceService();
         stockPriceService.getPriceHistory("APL", fromDate, toDate, StandardPeriodType.DAY);
-
     }
 
+    @Test(expected = StockServiceException.class)
+    public void testUnsupportedPeriod() throws StockServiceException {
+        LocalDate fromDate = LocalDate.of(2014, Month.JANUARY, 1);
+        LocalDate toDate = LocalDate.of(2014, Month.MARCH, 31);
+        StockPriceService stockPriceService = new YahooStockPriceService();
+        stockPriceService.getPriceHistory("APL", fromDate, toDate, StandardPeriodType.YEAR);
+    }
 }
