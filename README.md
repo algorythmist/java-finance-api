@@ -1,6 +1,6 @@
 # Java Finance API
 
-[![javadoc](https://javadoc.io/badge2/com.tecacet/java-finance-api/1.2.0/javadoc.svg)](https://javadoc.io/doc/com.tecacet/java-finance-api/1.2.0)
+[![javadoc](https://javadoc.io/badge2/com.tecacet/java-finance-api/javadoc.svg)](https://javadoc.io/doc/com.tecacet/java-finance-api)
 [![Maven Central](https://img.shields.io/maven-central/v/com.tecacet/java-finance-api.svg)](https://search.maven.org/search?q=a:java-finance-api)
 
 Accessing financial data can be tricky, especially of you are not willing to pay for it. 
