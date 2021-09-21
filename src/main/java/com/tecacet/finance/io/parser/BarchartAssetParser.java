@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * Parse Barchart File to extract asset information
+ */
 public class BarchartAssetParser {
 
     private final CSVReader<Asset> reader = CSVReader.readerWithIndexMapping(Asset.class, new String[]{"symbol", "name"})
