@@ -2,6 +2,8 @@ package com.tecacet.finance.model.calendar;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.time.DayOfWeek;
@@ -13,16 +15,20 @@ import java.time.LocalTime;
  */
 @Getter
 @Builder
+@ToString(onlyExplicitlyIncluded = true)
 public class TradingDay implements Comparable<TradingDay> {
 
     public enum MarketStatus {
         OPEN, CLOSED
     }
 
+    @ToString.Include
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
+    @ToString.Include
     private String description;
+    @ToString.Include
     private MarketStatus marketStatus;
 
     /**
