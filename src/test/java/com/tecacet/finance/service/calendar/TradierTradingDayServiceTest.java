@@ -58,7 +58,7 @@ public class TradierTradingDayServiceTest {
     public void getDaysIn2023() throws IOException {
         List<TradingDay> days = tradingDayService.getTradingDays(2023);
         Set<TradingDay> holidays = tradingDayService.getHolidays(days);
-        assertEquals(9, holidays.size()); //NOTE: missing Juneteenth
+        assertEquals(10, holidays.size()); //NOTE: missing Juneteenth
         System.out.println("Early close");
         Set<TradingDay> early = tradingDayService.getEarlyCloseDays(days);
         assertEquals(2, early.size());

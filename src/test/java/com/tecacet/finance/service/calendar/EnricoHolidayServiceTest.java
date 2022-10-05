@@ -84,7 +84,7 @@ public class EnricoHolidayServiceTest {
                 LocalDate.of(2024, 7, 4),
                 "usa"
         );
-        assertEquals(21, holidays.size());
+        assertEquals(23, holidays.size());
         Holiday holiday = holidays.get(0);
         assertEquals("postal_holiday", holiday.getType());
     }
