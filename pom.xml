@@ -15,7 +15,8 @@
 
     <properties>
         <commons-io.version>2.7</commons-io.version>
-        <jackson.version>2.13.4</jackson.version>
+        <jackson-databind.version>2.13.4.1</jackson-databind.version>
+        <jackson-datatype.version>2.13.4</jackson-datatype.version>
         <jacoco.version>0.8.7</jacoco.version>
         <jflat.version>1.3.8</jflat.version>
         <junit.version>[4.13.1,)</junit.version>
@@ -51,7 +52,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson-databind.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -62,7 +63,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson-datatype.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
