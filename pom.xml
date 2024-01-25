@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tecacet</groupId>
     <artifactId>java-finance-api</artifactId>
-    <version>1.2.3-SNAPSHOT</version>
+    <version>1.2.4-SNAPSHOT</version>
 
     <name>JFApi</name>
     <description>
@@ -209,19 +209,19 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/algorythmist/JFApi</url>
-        <connection>scm:git:git@github.com:algorythmist/JFApi.git</connection>
-        <developerConnection>scm:git:git@github.com:algorythmist/JFApi.git</developerConnection>
+        <url>https://github.com/algorythmist/java-finance-api</url>
+        <connection>scm:git:git@github.com:algorythmist/java-finance-api.git</connection>
+        <developerConnection>scm:git:git@github.com:algorythmist/java-finance-api.git</developerConnection>
     </scm>
 
     <ciManagement>
         <system>GitGub Actions</system>
-        <url>https://github.com/algorythmist/JFApi</url>
+        <url>https://github.com/algorythmist/java-finance-api</url>
     </ciManagement>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/algorythmist/JFApi/issues</url>
+        <url>https://github.com/algorythmist/java-finance-api/issues</url>
     </issueManagement>
 
     <distributionManagement>
