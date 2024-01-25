@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.HashMap;
@@ -26,18 +26,18 @@ public abstract class AbstractYahooService {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    protected Map<String, String> getRequestParams(LocalDate from, LocalDate to, StandardPeriodType periodType) throws IOException, StockServiceException {
+    protected Map<String, String> getRequestParams(LocalDate from, LocalDate to, StandardPeriodType periodType) throws StockServiceException {
         Map<String, String> params = new LinkedHashMap<>();
         params.put("period1", String.valueOf(toSeconds(from)));
         params.put("period2", String.valueOf(toSeconds(to)));
         params.put("interval", getPeriodCode(periodType));
         // crumb
-        params.put("crumb", CrumbManager.getCrumb());
+        //params.put("crumb", CrumbManager.getCrumb());
         return params;
     }
 
     protected InputStream getUrlStream(String symbol, Map<String, String> params) throws IOException {
-        String url = HISTQUOTES2_BASE_URL + URLEncoder.encode(symbol, "UTF-8") + "?" + getURLParameters(params);
+        String url = HISTQUOTES2_BASE_URL + URLEncoder.encode(symbol, StandardCharsets.UTF_8) + "?" + getURLParameters(params);
 
         // Get CSV from Yahoo
         logger.info("Sending request: {}", url);
@@ -47,12 +47,12 @@ public abstract class AbstractYahooService {
         redirectableRequest.setConnectTimeout(CONNECTION_TIMEOUT);
         redirectableRequest.setReadTimeout(CONNECTION_TIMEOUT);
         Map<String, String> requestProperties = new HashMap<>();
-        requestProperties.put("Cookie", CrumbManager.getCookie());
+        //requestProperties.put("Cookie", CrumbManager.getCookie());
         URLConnection connection = redirectableRequest.openConnection(requestProperties);
         return connection.getInputStream();
     }
 
-    private String getURLParameters(Map<String, String> params) throws UnsupportedEncodingException {
+    private String getURLParameters(Map<String, String> params) {
         StringBuilder sb = new StringBuilder();
         for (Entry<String, String> entry : params.entrySet()) {
             if (sb.length() > 0) {
@@ -60,8 +60,8 @@ public abstract class AbstractYahooService {
             }
             String key = entry.getKey();
             String value = entry.getValue();
-            key = URLEncoder.encode(key, "UTF-8");
-            value = URLEncoder.encode(value, "UTF-8");
+            key = URLEncoder.encode(key, StandardCharsets.UTF_8);
+            value = URLEncoder.encode(value, StandardCharsets.UTF_8);
             sb.append(String.format("%s=%s", key, value));
         }
         return sb.toString();

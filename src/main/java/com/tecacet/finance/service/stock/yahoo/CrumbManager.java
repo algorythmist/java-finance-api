@@ -11,6 +11,8 @@ import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
+@Deprecated
+//Probably no longer needed
 public class CrumbManager {
 
     private static final String HISTQUOTES2_CRUMB = System.getProperty("yahoofinance.crumb", "");
