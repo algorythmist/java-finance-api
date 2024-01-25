@@ -20,7 +20,6 @@ import java.util.Map.Entry;
 
 public abstract class AbstractYahooService {
 
-
     private static final String HISTQUOTES2_BASE_URL = "https://query1.finance.yahoo.com/v7/finance/download/";
     private static final int CONNECTION_TIMEOUT = 10000;
 

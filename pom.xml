@@ -27,10 +27,10 @@
         <coverage.totalLineRate>0.81</coverage.totalLineRate>
         <!-- ignore Crumb Manager -->
         <coverage.missedclasses>1</coverage.missedclasses>
-        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
-        <maven-gpg.version>1.6</maven-gpg.version>
+        <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+        <maven-gpg.version>3.1.0</maven-gpg.version>
     </properties>
 
     <dependencies>
