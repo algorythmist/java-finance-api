@@ -21,8 +21,10 @@ public class EnricoHolidayServiceTest {
     @Test
     public void getSupportedCountries() throws IOException {
         List<HolidaySupport> countries = holidayService.getSupportedCountries();
-        assertEquals(56, countries.size());
-        HolidaySupport holidaySupport = countries.get(1);
+        assertEquals(60, countries.size());
+        HolidaySupport holidaySupport = countries.stream().filter(
+                c -> c.getCountry().getCountryCode().equals("aus")
+        ).findFirst().get();
         Country country = holidaySupport.getCountry();
         assertEquals("aus", country.getCountryCode());
         assertEquals("Australia", country.getCountryName());
